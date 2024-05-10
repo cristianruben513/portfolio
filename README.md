@@ -10,7 +10,6 @@ backend:
 
 - [Next.js](nextjs.org) / TypeScript
 - [MDX](https://mdxjs.com) / [Contentlayer](https://contentlayer.dev/) (Blog Posts)
-- [Vercel Postgres](https://vercel.com/storage/postgres) (Database)
 
 frontend:
 
@@ -27,8 +26,6 @@ Make sure you have Node.js v18.17.0+ installed on your machine.
 2. **Environment variables**: Copy `.env.example` to a new `.env.local`
 3. **Database Setup**: See [Database Setup](#database-setup)
 4. **Start Developing**: `npm run dev`, this will automatically create the .contentlayer files and start the Next.js development server.
-
-## Database Setup
 
 - Vercel Postgres
   https://vercel.com/docs/storage/vercel-postgres/quickstart
