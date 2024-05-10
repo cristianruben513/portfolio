@@ -1,12 +1,10 @@
 import { allPosts } from ".contentlayer/generated";
-import { MoveUpRight } from "lucide-react";
-
-
 import PostList from "@/app/blog/components/PostList";
 import BentoGrid from "@/app/components/bento/BentoGrid";
 import Avatar from "@/app/components/ui/Avatar";
 import Link from "@/app/components/ui/Link";
 import Me from "@/public/avatar.webp";
+import { MoveUpRight } from "lucide-react";
 import Container from "./components/Container";
 import { Photos } from "./components/photos";
 
@@ -27,7 +25,7 @@ export default function Home() {
         >
           <Avatar src={Me} alt="Cristian Ruben" initials="br" size="xl" />
         </div>
-        
+
         <div
           className="animate-in space-y-4"
           style={{ "--index": 2 } as React.CSSProperties}

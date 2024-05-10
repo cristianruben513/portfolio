@@ -27,52 +27,6 @@ Make sure you have Node.js v18.17.0+ installed on your machine.
 3. **Database Setup**: See [Database Setup](#database-setup)
 4. **Start Developing**: `npm run dev`, this will automatically create the .contentlayer files and start the Next.js development server.
 
-- Vercel Postgres
-  https://vercel.com/docs/storage/vercel-postgres/quickstart
-
-```sql
--- Create blog views table
-CREATE TABLE IF NOT EXISTS blog_views (
-    slug VARCHAR(255) PRIMARY KEY,
-    count INT DEFAULT 0
-)
-```
-
-```sql
--- crete topics table
-CREATE TABLE topics (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
-)
-
--- Create CommunityPosts table
-CREATE TABLE community_posts (
-    id SERIAL PRIMARY KEY,
-    content TEXT NOT NULL,
-    clerk_user_id VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
-    topic_id INTEGER REFERENCES Topics(id)
-)
-
--- Create reactions table
-CREATE TABLE reactions (
-    id SERIAL PRIMARY KEY,
-    post_id INTEGER REFERENCES community_posts(id),
-    clerk_user_id VARCHAR(255) NOT NULL,
-    emoji VARCHAR(255) NOT NULL
-)
-
--- Create replies table, for community_posts
-CREATE TABLE replies (
-    id SERIAL PRIMARY KEY,
-    content TEXT NOT NULL,
-    clerk_user_id VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
-    post_id INTEGER REFERENCES CommunityPosts(id)
-)
-
-```
-
 ## Deployment
 
 This project can be [quickly deployed to Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBrianRuizy%2Fcristianfigueroa.dev). Simply connect your Vercel account to your GitHub repository, and Vercel will automatically build and deploy your application with each new push to the main branch.

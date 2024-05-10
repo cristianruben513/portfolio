@@ -1,68 +1,13 @@
-import { Post as PostType, allPosts } from ".contentlayer/generated";
-import Link from "@/app/components/ui/Link";
-import type { Metadata, ResolvingMetadata } from "next";
-import Image from "next/image";
-import { notFound } from "next/navigation";
-
+import { allPosts } from ".contentlayer/generated";
+import { formatDate } from "@/app/_utils/formatDate";
 import Mdx from "@/app/blog/components/MdxWrapper";
+import Container from "@/app/components/Container";
 import Tags from "@/app/components/Tags";
 import Avatar from "@/app/components/ui/Avatar";
+import Link from "@/app/components/ui/Link";
 import Me from "@/public/avatar.webp";
-
-import { formatDate } from "@/app/_utils/formatDate";
-import Container from "@/app/components/Container";
-
-type PostProps = {
-  post: PostType;
-  related: PostType[];
-};
-
-type Props = {
-  params: {
-    slug: string;
-    id: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
-
-export async function generateMetadata(
-  { params, searchParams }: Props,
-  parent: ResolvingMetadata,
-): Promise<Metadata> {
-  const post = allPosts.find((post) => post.slug === params.slug);
-
-  if (!post) {
-    notFound();
-  }
-
-  const {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-    slug,
-  } = post;
-
-  const ogImage = image
-    ? `https://cristianfigueroa.dev/${image}`
-    : `https://cristianfigueroa.dev/api/og?title=${title}`;
-
-  const metadata: Metadata = {
-    metadataBase: new URL("https://cristianfigueroa.dev"),
-    title: `${title} | Cristian Ruben`,
-    description,
-    openGraph: {
-      title: `${title} | Cristian Ruben`,
-      description,
-      type: "article",
-      publishedTime,
-      url: `https://cristianfigueroa.dev/blog/${slug}`,
-      images: [{ url: ogImage, alt: title }],
-    },
-  };
-
-  return metadata;
-}
+import Image from "next/image";
+import { notFound } from "next/navigation";
 
 export default async function Blog({ params }: { params: any }) {
   const post = allPosts.find((post) => post.slug === params.slug);
@@ -96,17 +41,14 @@ export default async function Blog({ params }: { params: any }) {
           </div>
 
           {post.image && (
-            <>
-              <div className="h-8" />
-              <Image
-                src={post.image}
-                alt={`${post.title} post image`}
-                width={700}
-                height={350}
-                className="-ml-6 w-[calc(100%+48px)] max-w-none md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)]"
-                priority
-              />
-            </>
+            <Image
+              src={post.image}
+              alt={`${post.title} post image`}
+              width={700}
+              height={350}
+              className="-ml-6 w-[calc(100%+48px)] max-w-none md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)] mt-8"
+              priority
+            />
           )}
 
           <div className="h-16" />

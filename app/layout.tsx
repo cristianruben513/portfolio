@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="es" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className=" bg-white text-primary antialiased dark:bg-black">
 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

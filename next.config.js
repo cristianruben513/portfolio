@@ -3,11 +3,7 @@ const { withContentlayer } = require("next-contentlayer");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverActions: true,
-  },
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     domains: [
       "tailwindui.com",
@@ -16,7 +12,6 @@ const nextConfig = {
       "m.media-amazon.com",
       "ik.imagekit.io",
       "miro.medium.com",
-      "img.clerk.com",
       "i.ytimg.com",
       "store.storeimages.cdn-apple.com",
       "www.apple.com",

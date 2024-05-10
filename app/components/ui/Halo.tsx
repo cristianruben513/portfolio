@@ -1,25 +1,18 @@
 "use client";
 
-import React, { ReactNode } from "react";
 import useMousePosition from "@/app/_hooks/usemouseposition";
-import { motion } from "framer-motion";
 import clsx from "clsx";
+import { motion } from "framer-motion";
+import React, { ReactNode } from "react";
 
 type HaloProps = {
   children: ReactNode | ReactNode[];
-  /** Width/height in px */
   size?: number;
-  /** How strong the effect should be (0-100) */
   strength?: number;
   className?: string;
 };
 
-export default function Halo({
-  children,
-  size = 600,
-  strength = 10,
-  className,
-}: HaloProps) {
+export default function Halo({ children, size = 600, strength = 10, className }: HaloProps) {
   const ref = React.useRef(null);
   const { x, y } = useMousePosition(ref);
   const offset = size / 2;

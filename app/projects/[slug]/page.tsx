@@ -4,7 +4,6 @@ import Container from "@/app/components/Container";
 import Link from "@/app/components/ui/Link";
 import { notFound } from "next/navigation";
 
-
 export default function Project({ params }: { params: any }) {
   const post = allProjects.find((post) => post.slug === params.slug);
 
