@@ -7,6 +7,21 @@ import Me from "@/public/avatar.webp";
 import { MoveUpRight } from "lucide-react";
 import Container from "./components/Container";
 import { Photos } from "./components/photos";
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cristian Ruben - Ingeniero en Software",
+  description:
+    "Ingeniero en Software y Programador Fullstack con +3 años de experiencia en el desarrollo de aplicaciones web y servicios de backend.",
+  openGraph: {
+    title: "Cristian Ruben - Ingeniero en Software",
+    description:
+      "Ingeniero en Software y Programador Fullstack con +3 años de experiencia en el desarrollo de aplicaciones web y servicios de backend.",
+    type: "website",
+    url: "https://cristianfigueroa.dev",
+    images: [{ url: "https://cristianfigueroa.dev/og_image.webp", alt: "Cristian Ruben" }],
+  }
+};
 
 export default function Home() {
   const posts = allPosts
@@ -34,7 +49,7 @@ export default function Home() {
             Cristian Ruben
           </h1>
 
-          <p className="max-w-xl text-secondary text-pretty mt-3">
+          <h2 className="max-w-xl text-secondary text-pretty mt-3">
             <span className="font-bold text-blue-500 dark:text-blue-300">
               Ingeniero en Software
             </span> {""}
@@ -43,7 +58,7 @@ export default function Home() {
               +3 años de experiencia
             </span> {""}
             en el desarrollo de aplicaciones web y servicios de backend.
-          </p>
+          </h2>
         </div>
       </Container>
 

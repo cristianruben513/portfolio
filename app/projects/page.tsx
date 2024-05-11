@@ -8,8 +8,17 @@ import Container from "../components/Container";
 import PageHeader from "../components/Header";
 
 export const metadata: Metadata = {
-  title: "Projects | Cristian Ruben",
-  description: "Here are some of the projects I've worked on.",
+  title: "Proyectos | Cristian Ruben",
+  description:
+    "Algunos de los proyectos en los que he trabajado y de los que estoy orgulloso.",
+  openGraph: {
+    title: "Proyectos | Cristian Ruben",
+    description:
+      "Algunos de los proyectos en los que he trabajado y de los que estoy orgulloso.",
+    type: "website",
+    url: "https://cristianfigueroa.dev/projects/",
+    images: [{ url: "https://cristianfigueroa.dev/api/og?title=projects", alt: "Proyectos" }],
+  },
 };
 
 export default function Blog() {

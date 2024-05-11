@@ -4,51 +4,39 @@ import Mdx from "@/app/blog/components/MdxWrapper";
 import Container from "@/app/components/Container";
 import Tags from "@/app/components/Tags";
 import Avatar from "@/app/components/ui/Avatar";
-import Link from "@/app/components/ui/Link";
 import Me from "@/public/avatar.webp";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import ContactForm from "../components/ContactForm";
 
 type Props = {
   params: {
     slug: string;
     id: string;
   };
-  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata(
-  { params }: Props,
-): Promise<Metadata> {
-
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = allPosts.find((post) => post.slug === params.slug);
 
-  if (!post) {
-    notFound();
-  }
+  if (!post) { notFound() }
 
-  const {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-    slug,
-  } = post;
+  const { title, publishedAt, summary, image, slug } = post;
 
   const ogImage = image
-    ? `https://cristianfigueroa.dev/${image}`
+    ? `https://cristianfigueroa.dev/blog/${slug}/${image}`
     : `https://cristianfigueroa.dev/api/og?title=${title}`;
 
   const metadata: Metadata = {
     metadataBase: new URL("https://cristianfigueroa.dev"),
     title: `${title} | Cristian Ruben`,
-    description,
+    description: summary,
     openGraph: {
       title: `${title} | Cristian Ruben`,
-      description,
+      description: summary,
       type: "article",
-      publishedTime,
+      publishedTime: publishedAt,
       url: `https://cristianfigueroa.dev/blog/${slug}`,
       images: [{ url: ogImage, alt: title }],
     },
@@ -111,16 +99,7 @@ export default async function Blog({ params }: { params: any }) {
             <Tags tags={post.tags} />
           </div>
 
-          <div className="flex flex-col gap-6">
-            <h2>Contacto</h2>
-            <p className="max-w-lg text-secondary">
-              Necesitas ayuda con un proyecto? Puedes contactarme a través de mis {""}
-              <Link href="/links" underline>
-                links
-              </Link>
-              . Estare encantado de ayudarte!{" "}
-            </p>
-          </div>
+          <ContactForm />
         </div>
       </div>
     </Container>

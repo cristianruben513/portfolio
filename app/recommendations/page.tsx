@@ -6,13 +6,13 @@ import { gear } from "./data";
 
 export const metadata: Metadata = {
   title: "Recomendaciones | Cristian Ruben",
-  description: "My toolbox. This is gear I actually own and recommend.",
+  description: "Dispositivos, Software, Libros, Musica, y más que me gusta, uso, y recomiendo.",
   openGraph: {
     title: "Recomendaciones | Cristian Ruben",
-    description: "My toolbox. This is gear I actually own and recommend.",
+    description: "Dispositivos, Software, Libros, Musica, y más que me gusta, uso, y recomiendo.",
     type: "website",
-    url: "https://cristianfigueroa.dev/blog/gear",
-    images: [{ url: "https://cristianfigueroa.dev/api/og?title=Gear", alt: "gear" }],
+    url: "https://cristianfigueroa.dev/recommendations",
+    images: [{ url: "https://cristianfigueroa.dev/api/og?title=Recommendations", alt: "recomendations" }],
   },
 };
 

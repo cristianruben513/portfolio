@@ -2,35 +2,8 @@ import Navigation from "@/app/components/Navigation";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
-import type { Metadata } from "next";
 
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Cristian Ruben - Ingeniero en Software",
-  description:
-    "Ingeniero en Software y Programador Fullstack con +3 años de experiencia en el desarrollo de aplicaciones web y servicios de backend.",
-  keywords: [
-    "Cristian Ruben",
-    "Desarrollador de Software",
-    "Programador Fullstack",
-    "Ingeniero en Software",
-    "Desarrollo de Aplicaciones Web",
-    "Backend",
-    "Frontend",
-    "Javascript",
-    "Typescript",
-    "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "SQL",
-    "Mas de 3 años de experiencia",
-    "Cristian Ruben Figueroa Espinoza",
-    "Servicios de desarrollo de software",
-    "Desarrollo de servicios de backend",
-  ]
-};
 
 //export const runtime = "edge"
 
@@ -51,12 +24,12 @@ export default function RootLayout({
             </div>
           </div>
 
-          <div className="relative">
+          <main className="relative">
             <Navigation />
             <div className="pb-24 pt-16 md:pb-44 md:pt-20">
               {children}
             </div>
-          </div>
+          </main>
 
         </ThemeProvider>
       </body>

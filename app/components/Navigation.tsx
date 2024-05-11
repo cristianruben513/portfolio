@@ -17,7 +17,7 @@ const links = [
   { label: "Proyectos", href: "/projects" },
   { label: "Sobre Mi", href: "/about" },
   { label: "Blog", href: "/blog" },
-  { label: "Recomendaciones", href: "/gear" },
+  { label: "Recomendaciones", href: "/recommendations" },
 ];
 
 export default function Navigation() {

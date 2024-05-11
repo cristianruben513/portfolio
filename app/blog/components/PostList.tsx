@@ -1,8 +1,8 @@
 "use client";
 
 import type { Post as PostType } from ".contentlayer/generated";
-import Post from "./Post";
 import React, { useRef, useState } from "react";
+import Post from "./Post";
 
 function getRelativeCoordinates(
   event: React.MouseEvent<HTMLUListElement>,
@@ -39,10 +39,8 @@ type PostListProps = {
 };
 
 export default function PostList({ posts }: PostListProps) {
-  const [mousePosition, setMousePosition] = useState({
-    x: 240,
-    y: 0,
-  });
+  const [mousePosition, setMousePosition] = useState({ x: 240, y: 0 });
+  
   const listRef = useRef(null);
   const handleMouseMove = (e: React.MouseEvent<HTMLUListElement>) => {
     setMousePosition(getRelativeCoordinates(e, listRef.current));

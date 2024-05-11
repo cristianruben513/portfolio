@@ -1,23 +1,29 @@
-import { Metadata } from "next";
+import { type Metadata } from "next";
 import Image from "next/image";
 
 import Section from "@/app/components/Section";
 import Link from "@/app/components/ui/Link";
-import colorado from "public/gallery/4.jpg";
+import { MoveUpRight } from "lucide-react";
 import meLily from "public/gallery/1_1.jpg";
-import hinesLogo from "public/work/uppe.jpg";
+import colorado from "public/gallery/4.jpg";
 import perishipLogo from "public/work/cbtis.jpeg";
+import hinesLogo from "public/work/uppe.jpg";
 import ConnectLinks from "../components/ConnectLinks";
 import Container from "../components/Container";
 import PageHeader from "../components/Header";
-import Workplaces from "./components/Workplaces";
 import Gallery from "./components/Gallery";
-import {  MoveUpRight } from "lucide-react"
+import Workplaces from "./components/Workplaces";
 
 export const metadata: Metadata = {
-  title: "About | Cristian Ruben",
-  description:
-    "Houston-based Software Engineer and a Content Creator, sharing insights on well-designed products and technology advancements.",
+  title: "Sobre Mi | Cristian Ruben",
+  description: "Un poquito de mi vida profesional, educativa y personal.",
+  openGraph: {
+    title: "Sobre Mi | Cristian Ruben",
+    description: "Un poquito de mi vida profesional, educativa y personal.",
+    type: "website",
+    url: "https://cristianfigueroa.dev/about",
+    images: [{ url: "https://cristianfigueroa.dev/api/og?title=Sobre+Mi", alt: "Acerca de mi" }],
+  }
 };
 
 export default function About() {
@@ -67,7 +73,7 @@ export default function About() {
           className="flex animate-in flex-col gap-16 md:gap-24"
           style={{ "--index": 3 } as React.CSSProperties}
         >
-          <Section heading="About" headingAlignment="left">
+          <Section heading="Acerca de mi" headingAlignment="left">
             <div className="flex flex-col gap-6 leading-loose">
               <p>
                 Hola, Soy Cristian Ruben, Vivo en Guanajuato, Mexico, llevo desde los 15 años programando, Soy un ingeniero en software titulado y me especializo en desarrollo web y diseño de productos.
@@ -78,7 +84,7 @@ export default function About() {
             </div>
           </Section>
 
-          <Section heading="Connect" headingAlignment="left">
+          <Section heading="Contacto" headingAlignment="left">
             <ul className="animated-list grid flex-grow grid-cols-1 gap-3 md:grid-cols-2">
               {ConnectLinks.map((link) => (
                 <li className="col-span-1 transition-opacity" key={link.label}>

@@ -3,13 +3,46 @@ import Mdx from "@/app/blog/components/MdxWrapper";
 import Container from "@/app/components/Container";
 import Link from "@/app/components/ui/Link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+type Props = {
+  params: {
+    slug: string;
+    id: string;
+  };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const post = allProjects.find((project) => project.slug === params.slug);
+
+  if (!post) { notFound() }
+
+  const { title, description, image, slug } = post;
+
+  const ogImage = image
+    ? `https://cristianfigueroa.dev/projects/${slug}/${image}`
+    : `https://cristianfigueroa.dev/api/og?title=${title}`;
+
+  const metadata: Metadata = {
+    metadataBase: new URL("https://cristianfigueroa.dev"),
+    title: `${title} | Cristian Ruben`,
+    description,
+    openGraph: {
+      title: `${title} | Cristian Ruben`,
+      description,
+      type: "article",
+      url: `https://cristianfigueroa.dev/projects/${slug}`,
+      images: [{ url: ogImage, alt: title }],
+    },
+  };
+
+  return metadata;
+}
 
 export default function Project({ params }: { params: any }) {
   const post = allProjects.find((post) => post.slug === params.slug);
 
-  if (!post) {
-    notFound();
-  }
+  if (!post) { notFound() }
 
   return (
     <Container>
