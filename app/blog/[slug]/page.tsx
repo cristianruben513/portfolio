@@ -10,6 +10,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import ContactForm from "../components/ContactForm";
 
+export const runtime = 'edge';
+
 type Props = {
   params: {
     slug: string;
