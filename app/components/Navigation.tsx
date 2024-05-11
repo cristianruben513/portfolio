@@ -33,6 +33,7 @@ export default function Navigation() {
             className="size-9"
           />
         </Link>
+        
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((link) => (
             <li key={link.href}>
@@ -48,6 +49,7 @@ export default function Navigation() {
         <Popover className="relative md:hidden">
           <Popover.Button className="flex h-8 w-8 items-center justify-center rounded-lg text-secondary">
             <Menu className="h-5 w-5 cursor-pointer text-secondary transition-colors hover:text-primary" />
+            <span className="sr-only">Menu</span>
           </Popover.Button>
           <Transition
             as={Fragment}

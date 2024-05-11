@@ -78,6 +78,7 @@ export function Photo({
               width={width}
               height={height}
               className="absolute inset-0 object-cover w-full h-full bg-neutral-400 pointer-events-none rounded-xl"
+              loading="lazy"
               priority
             />
             {children}

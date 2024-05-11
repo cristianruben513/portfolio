@@ -27,7 +27,7 @@ export default function YouTube() {
 
       <ul className="animated-list grid w-full grid-cols-2 grid-rows-2 gap-3">
         {[...Array(4)].map((_, index) => (
-          <div
+          <li
             key={index}
             className="relative col-span-1 row-span-1 overflow-hidden rounded-lg border border-secondary transition-opacity"
           >
@@ -37,7 +37,7 @@ export default function YouTube() {
               fill
               className="object-cover"
             />
-          </div>
+          </li>
         ))}
       </ul>
     </Card>

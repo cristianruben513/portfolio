@@ -1,4 +1,3 @@
-
 import { Listbox } from "@headlessui/react";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
@@ -33,9 +32,15 @@ export default function ThemeSwitcher() {
               )}
             >
               {resolvedTheme === "dark" ? (
-                <Moon className={iconClassName} />
+                <>
+                  <Moon className={iconClassName} />
+                  <span className="sr-only">Modo Oscuro</span>
+                </>
               ) : (
-                <Sun className={iconClassName} />
+                <>
+                  <Sun className={iconClassName} />
+                  <span className="sr-only">Modo Claro</span>
+                </>
               )}
             </Listbox.Button>
             <AnimatePresence>
