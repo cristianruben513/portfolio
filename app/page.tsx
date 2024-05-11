@@ -8,6 +8,7 @@ import { MoveUpRight } from "lucide-react";
 import Container from "./components/Container";
 import { Photos } from "./components/photos";
 import { type Metadata } from "next";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Cristian Ruben - Ingeniero en Software",
