@@ -8,7 +8,6 @@ import pelos from "./21.webp"
 import ixtapa from "./23.webp"
 import solovino from "./24.webp"
 import michi from "./25.webp"
-import uppe from "./28.webp"
 import siri from "./29.webp"
 import gatita from "./31.webp"
 import hades from "./33.webp"
@@ -55,11 +54,6 @@ export const myImages: Image[] = [
     img: michi,
     title: "Michi",
     alt: "Fotografia de mi pequeño Michi DEP"
-  },
-  {
-    img: uppe,
-    title: "UPPE, Penjamo",
-    alt: "Un bonito cielo en la uppe"
   },
   {
     img: siri,
