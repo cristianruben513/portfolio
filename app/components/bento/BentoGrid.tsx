@@ -2,7 +2,7 @@ import Card from "@/app/components/bento/CardTemplate";
 import Gumroad from "@/app/components/bento/Gumroad";
 import Instagram from "@/app/components/bento/Instagram";
 import Map from "@/app/components/bento/Map";
-import YouTube from "@/app/components/bento/Youtube";
+import YouTube from "@/app/components/bento/Projects";
 
 export default function BentoGrid() {
   return (
