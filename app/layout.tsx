@@ -5,8 +5,6 @@ import { GeistSans } from "geist/font/sans";
 
 import "./globals.css";
 
-//export const runtime = "edge"
-
 export default function RootLayout({
   children,
 }: {

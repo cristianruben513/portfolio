@@ -5,8 +5,6 @@ import Link from "@/app/components/ui/Link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
-export const runtime = 'edge';
-
 type Props = {
   params: {
     slug: string;
