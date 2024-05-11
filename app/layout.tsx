@@ -41,7 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className=" bg-white text-primary antialiased dark:bg-black">
+      <body className=" bg-white text-primary antialiased md:dark:bg-black dark:bg-zinc-900">
 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 

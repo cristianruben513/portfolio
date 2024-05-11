@@ -5,15 +5,15 @@ import PageHeader from "../components/Header";
 import PostList from "./components/PostList";
 
 export const metadata: Metadata = {
-  title: "Blog | Cristian Ruben",
+  title: "Mi Blog | Cristian Ruben",
   description:
-    "I write about programming, design, and occasionally life updates!",
+    "Escribiendo sobre programación, diseño y ocasionalmente actualizaciones de la vida!",
   openGraph: {
-    title: "Blog | Cristian Ruben",
+    title: "Mi Blog | Cristian Ruben",
     description:
-      "I write about programming, design, and occasionally life updates!",
+      "Escribiendo sobre programación, diseño y ocasionalmente actualizaciones de la vida!",
     type: "website",
-    url: "https://cristianfigueroa.dev/blog/Blog",
+    url: "https://cristianfigueroa.dev/blog/",
     images: [{ url: "https://cristianfigueroa.dev/api/og?title=Blog", alt: "Blog" }],
   },
 };
