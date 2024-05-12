@@ -35,27 +35,21 @@ export default function Home() {
     <div className="flex flex-col gap-16 md:gap-24">
 
       <Container className="flex animate-in flex-col gap-8 w-full">
-        <div
-          className="animate-in"
-          style={{ "--index": 1 } as React.CSSProperties}
-        >
+        <div className="animate-in" >
           <Avatar src={Me} alt="Cristian Ruben" initials="br" size="xl" />
         </div>
 
-        <div
-          className="animate-in space-y-4"
-          style={{ "--index": 2 } as React.CSSProperties}
-        >
+        <div className="animate-in space-y-4">
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-primary">
             Cristian Ruben
           </h1>
 
           <h2 className="max-w-xl text-secondary text-pretty mt-3">
-            <span className="font-bold text-blue-500 dark:text-blue-300">
+            <span className="font-bold text-blue-700 dark:text-blue-300">
               Ingeniero en Software
             </span> {""}
             y Programador Fullstack con {""}
-            <span className="italic text-orange-500 dark:text-yellow-200">
+            <span className="italic text-orange-700 dark:text-yellow-200">
               +3 años de experiencia
             </span> {""}
             en el desarrollo de aplicaciones web y servicios de backend.
@@ -63,19 +57,13 @@ export default function Home() {
         </div>
       </Container>
 
-      <Container
-        className="animate-in"
-        style={{ "--index": 3 } as React.CSSProperties}
-      >
+      <Container className="animate-in">
         <BentoGrid />
       </Container>
 
       <Photos />
 
-      <Container
-        className="flex animate-in flex-col gap-8 w-full"
-        style={{ "--index": 4 } as React.CSSProperties}
-      >
+      <Container className="flex animate-in flex-col gap-8 w-full">
         <div className="space-y-4">
           <Link
             className="group flex items-center gap-2 text-xl font-semibold tracking-tight text-primary"

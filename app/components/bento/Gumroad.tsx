@@ -15,7 +15,7 @@ export default function Gumroad() {
     {
       href: "mailto:cristian.figueroa.crfe@gmail.com",
       icon: <IoMail />,
-      styles: "bg-white text-black",
+      styles: "bg-neutral-200 text-black",
       arialabel: "Contactame a traves de Email"
     },
     {

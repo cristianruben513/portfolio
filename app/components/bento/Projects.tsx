@@ -34,8 +34,9 @@ export default function YouTube() {
             <Image
               src={`/thumbs/projects/project${index + 1}.webp`}
               alt="Thumbnail"
-              fill
-              className="object-cover"
+              width={200}
+              height={112}
+              className="object-cover size-full"
             />
           </li>
         ))}

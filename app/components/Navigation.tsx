@@ -47,8 +47,8 @@ export default function Navigation() {
         </div>
 
         <Popover className="relative md:hidden">
-          <Popover.Button className="flex h-8 w-8 items-center justify-center rounded-lg text-secondary">
-            <Menu className="h-5 w-5 cursor-pointer text-secondary transition-colors hover:text-primary" />
+          <Popover.Button className="flex size-8 items-center justify-center rounded-lg text-secondary">
+            <Menu className="size-5 cursor-pointer text-secondary transition-colors hover:text-primary" />
             <span className="sr-only">Menu</span>
           </Popover.Button>
           <Transition
@@ -60,7 +60,7 @@ export default function Navigation() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute right-0 z-10 mt-2 w-48 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base shadow-md focus:outline-none sm:text-sm">
+            <Popover.Panel className="absolute right-0 z-10 mt-2 w-48 origin-top-right overflow-auto rounded-xl p-2 text-base sm:text-sm">
               <div className="grid">
                 {links.map((link) => (
                   <Link

@@ -7,15 +7,13 @@ import { useEffect, useState } from "react";
 
 export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme, resolvedTheme, themes } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return null;
-  }
+  if (!mounted) return null;
 
   return (
     <Listbox value={theme} onChange={(value) => setTheme(value)}>
@@ -52,45 +50,48 @@ export default function ThemeSwitcher() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ type: "spring", bounce: 0.3, duration: 0.3 }}
-                  className="w-42 absolute right-0 z-10 mt-2 max-h-60 origin-top-right overflow-auto rounded-xl bg-primary p-2 text-base capitalize shadow-md focus:outline-none sm:text-sm"
+                  className="w-42 absolute right-0 z-10 mt-2 max-h-60 origin-top-right overflow-auto rounded-xl bg-primary p-2 text-base capitalize sm:text-sm"
                 >
-                  {themes.map((theme) => (
-                    <Listbox.Option
-                      key={theme}
-                      className={({ active }) =>
-                        clsx(
-                          "relative cursor-default select-none rounded-md py-2 pl-10 pr-4",
-                          active ? "bg-secondary" : "",
-                        )
-                      }
-                      value={theme}
-                    >
-                      {({ selected }) => (
-                        <>
-                          <span
-                            className={`block truncate ${selected ? "font-medium" : "font-normal"
-                              }`}
-                          >
-                            {theme == "system" ? "Automatic" : theme}
-                          </span>
-                          {selected ? (
-                            <span className="absolute inset-y-0 left-0 flex items-center pl-3 dark:text-neutral-50">
-                              <Check
-                                className="h-5 w-5"
-                                aria-hidden="true"
-                              />
-                            </span>
-                          ) : null}
-                        </>
-                      )}
-                    </Listbox.Option>
-                  ))}
+                  <Listbox.Option
+                    className={clsx(
+                      "relative cursor-default select-none rounded-md py-2 pl-10 pr-4",
+                      resolvedTheme === "dark" && "dark:bg-secondary bg-neutral-200"
+                    )}
+                    value="dark"
+                  >
+                    <span>Oscuro</span>
+                    {resolvedTheme === "dark" && (
+                      <span className="absolute inset-y-0 left-0 flex items-center pl-3 dark:text-neutral-50">
+                        <Check
+                          className="h-5 w-5"
+                          aria-hidden="true"
+                        />
+                      </span>
+                    )}
+                  </Listbox.Option>
+                  <Listbox.Option
+                    className={clsx(
+                      "relative cursor-default select-none rounded-md py-2 pl-10 pr-4",
+                      resolvedTheme === "light" && "dark:bg-secondary bg-neutral-200"
+                    )}
+                    value="light"
+                  >
+                    <span>Claro</span>
+                    {resolvedTheme === "light" && (
+                      <span className="absolute inset-y-0 left-0 flex items-center pl-3 dark:text-neutral-50">
+                        <Check
+                          className="h-5 w-5"
+                          aria-hidden="true"
+                        />
+                      </span>
+                    )}
+                  </Listbox.Option>
                 </Listbox.Options>
               )}
             </AnimatePresence>
           </div>
         );
       }}
-    </Listbox>
+    </Listbox >
   );
 }
