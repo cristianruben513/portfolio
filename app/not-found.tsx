@@ -4,7 +4,7 @@ import Container from "./components/Container";
 
 export const metadata: Metadata = {
   title: "404 | Cristian Ruben",
-  description: "Uh oh! This page does not exist",
+  description: "Pagina no existente",
 };
 
 const Custom404 = (): JSX.Element => (
