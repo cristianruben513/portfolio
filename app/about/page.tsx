@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     title: "Sobre Mi | Cristian Ruben",
     description: "Un poquito de mi vida profesional, educativa y personal.",
     type: "website",
-    url: "https://cristianfigueroa.dev/about",
-    images: [{ url: "https://cristianfigueroa.dev/api/og?title=Sobre+Mi", alt: "Acerca de mi" }],
+    url: "https://cristian.online/about",
+    images: [{ url: "https://cristian.online/api/og?title=Sobre+Mi", alt: "Acerca de mi" }],
   }
 };
 

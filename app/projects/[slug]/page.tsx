@@ -20,18 +20,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { title, description, image, slug } = post;
 
   const ogImage = image
-    ? `https://cristianfigueroa.dev/projects/${slug}/${image}`
-    : `https://cristianfigueroa.dev/api/og?title=${title}`;
+    ? `https://cristian.online/projects/${slug}/${image}`
+    : `https://cristian.online/api/og?title=${title}`;
 
   const metadata: Metadata = {
-    metadataBase: new URL("https://cristianfigueroa.dev"),
+    metadataBase: new URL("https://cristian.online"),
     title: `${title} | Cristian Ruben`,
     description,
     openGraph: {
       title: `${title} | Cristian Ruben`,
       description,
       type: "article",
-      url: `https://cristianfigueroa.dev/projects/${slug}`,
+      url: `https://cristian.online/projects/${slug}`,
       images: [{ url: ogImage, alt: title }],
     },
   };

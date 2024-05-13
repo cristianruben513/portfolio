@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     description:
       "Escribiendo sobre programación, diseño y ocasionalmente actualizaciones de la vida!",
     type: "website",
-    url: "https://cristianfigueroa.dev/blog/",
-    images: [{ url: "https://cristianfigueroa.dev/api/og?title=Blog", alt: "Blog" }],
+    url: "https://cristian.online/blog/",
+    images: [{ url: "https://cristian.online/api/og?title=Blog", alt: "Blog" }],
   },
 };
 

@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     description:
       "Ingeniero en Software y Programador Fullstack con +3 años de experiencia en el desarrollo de aplicaciones web y servicios de backend.",
     type: "website",
-    url: "https://cristianfigueroa.dev",
-    images: [{ url: "https://cristianfigueroa.dev/og_image.webp", alt: "Cristian Ruben" }],
+    url: "https://cristian.online",
+    images: [{ url: "https://cristian.online/og_image.webp", alt: "Cristian Ruben" }],
   }
 };
 
