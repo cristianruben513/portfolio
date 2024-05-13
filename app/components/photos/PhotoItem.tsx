@@ -1,33 +1,16 @@
-"use client"
-
-import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
-import { useState } from 'react';
-
-const possibleRotations = [3.7, -3.7,];
 
 interface PhotoProps {
   img: StaticImageData;
   title: string;
   alt: string;
-  idx: number;
 }
 
-export const Photo = ({ img, title, alt, idx }: PhotoProps) => {
-  const [isVisible, setIsVisible] = useState(false);
-
+export const Photo = ({ img, title, alt }: PhotoProps) => {
   return (
-    <motion.div
+    <div
       key={img.src}
-      initial={{
-        scale: 1, rotate: possibleRotations[idx % possibleRotations.length], opacity: 0
-      }}
-      whileHover={{ scale: 1.1, rotate: 0, transition: { duration: 0.2 } }}
-      whileInView={{ opacity: 1, transition: { delay: idx / 100 } }}
-      viewport={{ once: true }}
-      onHoverStart={() => setIsVisible(true)}
-      onHoverEnd={() => setIsVisible(false)}
-      className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800"
+      className="relative aspect-[9/10] w-40 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 odd:rotate-6 even:-rotate-6 hover:scale-110 transition-transform duration-300 ease-in-out hover:rotate-0"
     >
       <Image
         src={img}
@@ -35,17 +18,14 @@ export const Photo = ({ img, title, alt, idx }: PhotoProps) => {
         className="absolute inset-0 size-full object-cover"
         placeholder="blur"
       />
-      
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 0.2 } }}
-          exit={{ opacity: 0 }}
-          className="absolute inset-0 w-full bg-gradient-to-t from-black/75 via-black/30 flex items-end"
-        >
-          <h3 className="px-3 py-2 font-mono text-xs font-bold text-white">{title}</h3>
-        </motion.div>
-      )}
-    </motion.div>
+
+      <div
+        className="absolute inset-0 w-full bg-gradient-to-t from-black/75 via-black/30 flex items-end transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100"
+      >
+        <h3 className="px-3 py-2 font-mono text-xs font-bold text-white">
+          {title}
+        </h3>
+      </div>
+    </div>
   );
 };
