@@ -3,7 +3,6 @@ import { formatDate } from "@/app/_utils/formatDate";
 import Mdx from "@/app/blog/components/MdxWrapper";
 import Container from "@/app/components/Container";
 import Tags from "@/app/components/Tags";
-import Avatar from "@/app/components/ui/Avatar";
 import Me from "@/public/avatar.webp";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -64,7 +63,16 @@ export default async function Blog({ params }: { params: any }) {
               <p className="text-secondary">{post.summary}</p>
             </div>
             <div className="flex max-w-none items-center gap-4">
-              <Avatar src={Me} initials="br" size="sm" />
+              <div className="overflow-hidden rounded-full size-10">
+                <Image
+                  src={Me}
+                  alt="Cristian Ruben"
+                  width={1200}
+                  height={1200}
+                  priority
+                  placeholder="blur"
+                />
+              </div>
               <div className="leading-tight">
                 <p>Cristian Ruben</p>
                 <p className="text-secondary">
