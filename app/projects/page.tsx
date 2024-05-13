@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     description:
       "Algunos de los proyectos en los que he trabajado y de los que estoy orgulloso.",
     type: "website",
-    url: "https://cristian.online/projects/",
-    images: [{ url: "https://cristian.online/api/og?title=projects", alt: "Proyectos" }],
+    url: "https://cristian.digital/projects/",
+    images: [{ url: "https://cristian.digital/api/og?title=projects", alt: "Proyectos" }],
   },
 };
 

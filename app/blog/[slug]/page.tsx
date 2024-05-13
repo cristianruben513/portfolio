@@ -25,11 +25,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { title, publishedAt, summary, image, slug } = post;
 
   const ogImage = image
-    ? `https://cristian.online/blog/${slug}/${image}`
-    : `https://cristian.online/api/og?title=${title}`;
+    ? `https://cristian.digital/blog/${slug}/${image}`
+    : `https://cristian.digital/api/og?title=${title}`;
 
   const metadata: Metadata = {
-    metadataBase: new URL("https://cristian.online"),
+    metadataBase: new URL("https://cristian.digital"),
     title: `${title} | Cristian Ruben`,
     description: summary,
     openGraph: {
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: summary,
       type: "article",
       publishedTime: publishedAt,
-      url: `https://cristian.online/blog/${slug}`,
+      url: `https://cristian.digital/blog/${slug}`,
       images: [{ url: ogImage, alt: title }],
     },
   };

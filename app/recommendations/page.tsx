@@ -11,8 +11,8 @@ export const metadata: Metadata = {
     title: "Recomendaciones | Cristian Ruben",
     description: "Dispositivos, Software, Libros, Musica, y más que me gusta, uso, y recomiendo.",
     type: "website",
-    url: "https://cristian.online/recommendations",
-    images: [{ url: "https://cristian.online/api/og?title=Recommendations", alt: "recomendations" }],
+    url: "https://cristian.digital/recommendations",
+    images: [{ url: "https://cristian.digital/api/og?title=Recommendations", alt: "recomendations" }],
   },
 };
 

@@ -2,8 +2,8 @@ import { allProjects } from ".contentlayer/generated";
 import Mdx from "@/app/blog/components/MdxWrapper";
 import Container from "@/app/components/Container";
 import Link from "@/app/components/ui/Link";
-import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: {
@@ -20,18 +20,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { title, description, image, slug } = post;
 
   const ogImage = image
-    ? `https://cristian.online/projects/${slug}/${image}`
-    : `https://cristian.online/api/og?title=${title}`;
+    ? `https://cristian.digital/projects/${slug}/${image}`
+    : `https://cristian.digital/api/og?title=${title}`;
 
   const metadata: Metadata = {
-    metadataBase: new URL("https://cristian.online"),
+    metadataBase: new URL("https://cristian.digital"),
     title: `${title} | Cristian Ruben`,
     description,
     openGraph: {
       title: `${title} | Cristian Ruben`,
       description,
       type: "article",
-      url: `https://cristian.online/projects/${slug}`,
+      url: `https://cristian.digital/projects/${slug}`,
       images: [{ url: ogImage, alt: title }],
     },
   };

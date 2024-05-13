@@ -5,10 +5,9 @@ import Avatar from "@/app/components/ui/Avatar";
 import Link from "@/app/components/ui/Link";
 import Me from "@/public/avatar.webp";
 import { MoveUpRight } from "lucide-react";
+import { type Metadata } from "next";
 import Container from "./components/Container";
 import { Photos } from "./components/photos";
-import { type Metadata } from "next";
-import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Cristian Ruben - Ingeniero en Software",
@@ -19,8 +18,8 @@ export const metadata: Metadata = {
     description:
       "Ingeniero en Software y Programador Fullstack con +3 años de experiencia en el desarrollo de aplicaciones web y servicios de backend.",
     type: "website",
-    url: "https://cristian.online",
-    images: [{ url: "https://cristian.online/og_image.webp", alt: "Cristian Ruben" }],
+    url: "https://cristian.digital",
+    images: [{ url: "https://cristian.digital/og_image.webp", alt: "Cristian Ruben" }],
   }
 };
 

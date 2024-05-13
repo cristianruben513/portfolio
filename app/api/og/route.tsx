@@ -1,5 +1,7 @@
-import { ImageResponse } from 'next/og'
+import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
+
+export const runtime = "edge";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
@@ -15,7 +17,7 @@ export async function GET(req: NextRequest) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundImage: 'url(https://cristian.online/og-bg.png)',
+          backgroundImage: 'url(https://cristian.digital/og-bg.png)',
         }}
       >
         <div
