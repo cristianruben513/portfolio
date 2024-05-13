@@ -31,6 +31,7 @@ export default function Navigation() {
             src={icon}
             alt="Avatar de Cristian Ruben"
             className="size-9"
+            priority
           />
         </Link>
         

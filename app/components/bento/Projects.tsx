@@ -18,7 +18,7 @@ export default function YouTube() {
           className="mt-auto flex items-center gap-1.5 rounded-full bg-tertiary px-4 py-1.5 text-sm"
           href="/projects"
         >
-          <span className="font-medium text-primary flex items-center gap-3">
+          <span className="font-medium text-primary flex items-center gap-2">
             Proyectos
             <MoveUpRightIcon size={18} />
           </span>

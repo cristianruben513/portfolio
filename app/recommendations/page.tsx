@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Gear() {
+export default function Recommendations() {
   const categories = gear.reduce((acc, item) => {
     if (!acc.includes(item.category)) {
       acc.push(item.category);
@@ -27,36 +27,34 @@ export default function Gear() {
   categories.sort();
 
   return (
-    <Container>
-      <div className="flex flex-col gap-16 md:gap-24">
-        <PageHeader title="Mis Recomendaciones">
-          Dispositivos, Software, Libros, Musica, y más que me gusta, uso, y recomiendo.
-        </PageHeader>
+    <Container className="flex flex-col gap-16 md:gap-24">
+      <PageHeader title="Mis Recomendaciones">
+        Dispositivos, Software, Libros, Musica, y más que me gusta, uso, y recomiendo.
+      </PageHeader>
 
-        {categories.map((category, index) => (
-          <section
-            className="flex animate-in flex-col gap-8"
-            key={index}
-            style={{ "--index": 3 } as React.CSSProperties}
-          >
-            <h2 className="text-secondary">{category}</h2>
-            <ul className="animated-list grid gap-x-6 gap-y-8 md:grid-cols-2">
-              {gear.map((item, index) => {
-                if (item.category !== category) return null
+      {categories.map((category, index) => (
+        <section
+          key={index}
+          className="flex animate-in flex-col gap-8"
+          style={{ "--index": 2 } as React.CSSProperties}
+        >
+          <h2 className="text-secondary">{category}</h2>
+          <ul className="animated-list grid gap-x-6 gap-y-8 md:grid-cols-2">
+            {gear.map((item, index) => {
+              if (item.category !== category) return null
 
-                return (
-                  <Item
-                    key={index}
-                    title={item.name}
-                    description={item.description}
-                    image={item.image}
-                  />
-                );
-              })}
-            </ul>
-          </section>
-        ))}
-      </div>
+              return (
+                <Item
+                  key={index}
+                  title={item.name}
+                  description={item.description}
+                  image={item.image}
+                />
+              );
+            })}
+          </ul>
+        </section>
+      ))}
     </Container>
   );
 }

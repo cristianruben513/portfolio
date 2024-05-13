@@ -7,24 +7,23 @@ import { useEffect, useRef } from "react";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
-export default function Map({ lng, lat, zoom = 2.5, pitch = 30, time = null }) {
+export default function Map({ lng, lat, zoom = 2.5, pitch = 30 }) {
   const mapContainer = useRef(null);
   const map = useRef(null);
 
   const { resolvedTheme } = useTheme();
+
   let mapTheme;
+
   if (resolvedTheme === "dark") {
     mapTheme = "night";
   } else if (resolvedTheme === "light") {
     mapTheme = "light";
   }
 
-  if (time) {
-    mapTheme = time;
-  }
-
   useEffect(() => {
     if (map.current) return;
+    
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       center: [lng, lat],
@@ -32,7 +31,6 @@ export default function Map({ lng, lat, zoom = 2.5, pitch = 30, time = null }) {
       pitch: pitch,
     });
 
-    // set config properties
     map.current.on("style.load", () => {
       map.current.setConfigProperty("basemap", "lightPreset", mapTheme);
       map.current.setPadding({ left: 150 });
@@ -46,5 +44,5 @@ export default function Map({ lng, lat, zoom = 2.5, pitch = 30, time = null }) {
     });
   });
 
-  return <div ref={mapContainer} className=" h-full w-full" />;
+  return <div ref={mapContainer} className="size-full" />;
 }

@@ -19,9 +19,11 @@ export default function Halo({ children, size = 600, strength = 10, className }:
 
   // matching tailwind md breakpoint
   let isMobile = false;
+  
   if (typeof window !== "undefined") {
     isMobile = window.matchMedia("(max-width: 768px)").matches;
   }
+
   return (
     <motion.div
       ref={ref}

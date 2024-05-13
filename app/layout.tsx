@@ -2,7 +2,6 @@ import Navigation from "@/app/components/Navigation";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
-
 import Footer from "./components/Footer";
 import Background from "./components/background";
 import "./globals.css";
