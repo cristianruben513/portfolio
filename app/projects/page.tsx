@@ -25,7 +25,7 @@ export default function Blog() {
   const projects = allProjects;
 
   return (
-    <Container className="mx-auto max-w-[800px]">
+    <Container className="mx-auto max-w-[800px] min-h-screen">
       <div className="flex flex-col gap-16 md:gap-24 ">
         <PageHeader title="Mis Proyectos">
           Algunos de los proyectos en los que he trabajado y de los que estoy orgulloso.

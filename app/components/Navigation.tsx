@@ -61,7 +61,7 @@ export default function Navigation() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute right-0 z-10 mt-2 w-48 origin-top-right overflow-auto rounded-xl p-2 text-base sm:text-sm bg-neutra-200 dark:bg-dark">
+            <Popover.Panel className="absolute right-0 z-10 mt-2 w-48 origin-top-right overflow-auto rounded-xl p-2 text-base sm:text-sm bg-neutral-200 dark:bg-black">
               <div className="grid">
                 {links.map((link) => (
                   <Link

@@ -74,10 +74,10 @@ export default function About() {
         <Section heading="Acerca de mi" headingAlignment="left">
           <div className="flex flex-col gap-6 leading-loose">
             <p>
-              Hola, Soy Cristian Ruben, Vivo en Guanajuato, Mexico, llevo desde los 15 años programando, Soy un ingeniero en software titulado y me especializo en desarrollo web y diseño de productos.
+              Hola, Soy Cristian Ruben, Vivo en Guanajuato, Mexico, llevo desde los 16 años programando, Soy un ingeniero en software y me especializo en desarrollo web y diseño de productos.
             </p>
             <p>
-              Cuando no estoy trabajando en mi escritorio, probablemente estoy levantando pesas, jugando futbol con mi hermano, o disfrutando de la vida
+              Cuando no estoy trabajando en mi escritorio, probablemente estoy escuchando un podcast, jugando futbol con mi hermano, o disfrutando de la vida
             </p>
           </div>
         </Section>

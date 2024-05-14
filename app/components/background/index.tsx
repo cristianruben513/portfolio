@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
+import { isDesktop } from 'react-device-detect';
 import "./index.css";
 
 export default function Background() {
@@ -51,9 +52,11 @@ export default function Background() {
   };
 
   useEffect(() => {
-    generateSpaceLayer("2px", ".space-1", 200, "35s");
-    generateSpaceLayer("3px", ".space-2", 100, "30s");
-    generateSpaceLayer("6px", ".space-3", 25, "25s");
+    if (isDesktop) {
+      generateSpaceLayer("2px", ".space-1", 200, "35s");
+      generateSpaceLayer("3px", ".space-2", 100, "30s");
+      generateSpaceLayer("6px", ".space-3", 25, "25s");
+    }
   }, [theme]);
 
   return (
