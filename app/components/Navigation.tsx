@@ -2,15 +2,15 @@
 
 import ThemeSwitcher from "@/app/components/ThemeSwitcher";
 import NavLink from "@/app/components/ui/NavLink";
-import { Popover, Transition } from "@headlessui/react";
+import { Popover, PopoverButton, PopoverPanel, Transition } from "@headlessui/react";
 import clsx from "clsx";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Fragment } from "react";
-import Image from "next/image";
 
-import icon from "@/app/icon.webp"
+import icon from "@/app/icon.webp";
 
 const links = [
   { label: "Inicio", href: "/" },
@@ -34,7 +34,7 @@ export default function Navigation() {
             priority
           />
         </Link>
-        
+
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((link) => (
             <li key={link.href}>
@@ -48,10 +48,10 @@ export default function Navigation() {
         </div>
 
         <Popover className="relative md:hidden">
-          <Popover.Button className="flex size-8 items-center justify-center rounded-lg text-secondary">
+          <PopoverButton className="flex size-8 items-center justify-center rounded-lg text-secondary">
             <Menu className="size-5 cursor-pointer text-secondary transition-colors hover:text-primary" />
             <span className="sr-only">Menu</span>
-          </Popover.Button>
+          </PopoverButton>
           <Transition
             as={Fragment}
             enter="transition ease-out duration-200"
@@ -61,7 +61,7 @@ export default function Navigation() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute right-0 z-10 mt-2 w-48 origin-top-right overflow-auto rounded-xl p-2 text-base sm:text-sm bg-neutral-200 dark:bg-black">
+            <PopoverPanel className="absolute right-0 z-10 mt-2 w-48 origin-top-right overflow-auto rounded-xl p-2 text-base sm:text-sm bg-neutral-200 dark:bg-black">
               <div className="grid">
                 {links.map((link) => (
                   <Link
@@ -78,7 +78,7 @@ export default function Navigation() {
                   </Link>
                 ))}
               </div>
-            </Popover.Panel>
+            </PopoverPanel>
           </Transition>
         </Popover>
       </nav>

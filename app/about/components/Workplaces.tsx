@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import Image, { StaticImageData } from "next/image";
 
 type Workplace = {
@@ -19,10 +18,7 @@ function Workplace({ title, company, imageSrc, time, link }: Workplace) {
           alt={company}
           width={48}
           height={48}
-          className={clsx(
-            "rounded-full",
-            company === "University of Houston" && "bg-neutral-50"
-          )}
+          className="rounded-full"
         />
         <div className="flex flex-col gap-px md:text-base text-sm">
           <p className={link ? "external-arrow" : ""}>{title}</p>

@@ -14,12 +14,15 @@ import PageHeader from "../components/Header";
 import Gallery from "./components/Gallery";
 import Workplaces from "./components/Workplaces";
 
+const title = "Sobre Mi | Cristian Ruben";
+const description = "Un poquito de mi vida profesional, educativa y personal.";
+
 export const metadata: Metadata = {
-  title: "Sobre Mi | Cristian Ruben",
-  description: "Un poquito de mi vida profesional, educativa y personal.",
+  title,
+  description,
   openGraph: {
-    title: "Sobre Mi | Cristian Ruben",
-    description: "Un poquito de mi vida profesional, educativa y personal.",
+    title,
+    description,
     type: "website",
     url: "https://cristian.digital/about",
     images: [{ url: "https://cristian.digital/api/og?title=Sobre+Mi", alt: "Acerca de mi" }],
@@ -40,7 +43,7 @@ export default function About() {
         >
           <Image
             src={meLily}
-            alt={"me and lily"}
+            alt="Yo y mi amor"
             width={324}
             height={139}
             className="pointer-events-none relative inset-0 h-56 -rotate-6 rounded-xl bg-gray-400 object-cover shadow-md"
