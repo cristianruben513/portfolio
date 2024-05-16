@@ -81,6 +81,7 @@ export default function Home() {
             Ocasionalmente escribo sobre programación, productividad y más.
           </p>
         </div>
+        
         <PostList posts={posts} />
       </Container>
     </div>

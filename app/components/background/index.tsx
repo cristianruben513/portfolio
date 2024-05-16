@@ -53,9 +53,9 @@ export default function Background() {
 
   useEffect(() => {
     if (isDesktop) {
-      generateSpaceLayer("2px", ".space-1", 150, "35s");
-      generateSpaceLayer("3px", ".space-2", 100, "30s");
-      generateSpaceLayer("6px", ".space-3", 25, "25s");
+      generateSpaceLayer("2px", ".space-1", 120, "35s");
+      generateSpaceLayer("3px", ".space-2", 80, "50s");
+      generateSpaceLayer("6px", ".space-3", 25, "65s");
     }
   }, [theme]);
 

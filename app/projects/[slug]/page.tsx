@@ -54,7 +54,7 @@ export default function Project({ params }: { params: any }) {
               {post.url && (
                 <>
                   <span>&middot;</span>
-                  <Link href={post.url} className="no-underline hover:underline bg-gray-900 p-2 py-1 rounded-md text-sm">
+                  <Link href={post.url} className="no-underline hover:underline dark:bg-black bg-white p-2 py-1 rounded-md text-sm">
                     Visit Project
                   </Link>
                 </>
@@ -65,10 +65,7 @@ export default function Project({ params }: { params: any }) {
               {post.title}
             </h1>
 
-            <p
-              className="animate-in text-secondary"
-              style={{ "--index": 1 } as React.CSSProperties}
-            >
+            <p className="animate-in text-secondary">
               {post.description}
             </p>
           </div>
@@ -100,7 +97,6 @@ export default function Project({ params }: { params: any }) {
           </Link>
         </div>
 
-        <div />
       </div>
     </Container>
   );

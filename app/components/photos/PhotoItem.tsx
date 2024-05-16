@@ -10,7 +10,7 @@ export const Photo = ({ img, title, alt }: PhotoProps) => {
   return (
     <div
       key={img.src}
-      className="relative aspect-[9/10] w-40 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 odd:rotate-6 even:-rotate-6 hover:scale-110 transition-transform duration-300 ease-in-out hover:rotate-0"
+      className="relative aspect-[9/10] w-40 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 odd:rotate-3 even:-rotate-3 hover:scale-110 transition-transform duration-300 ease-in-out hover:rotate-0"
     >
       <Image
         src={img}

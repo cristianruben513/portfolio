@@ -1,10 +1,9 @@
-import React from "react";
+import type { Post } from ".contentlayer/generated";
+import { formatDate } from "@/app/_utils/formatDate";
+import Section from "@/app/components/Section";
+import Link from "@/app/components/ui/Link";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "@/app/components/ui/Link";
-import Section from "@/app/components/Section";
-import { formatDate } from "@/app/_utils/formatDate";
-import type { Post } from ".contentlayer/generated";
 
 type PostProps = {
   post: Post;
@@ -16,7 +15,7 @@ type PostProps = {
 
 export default function Post({ post, mousePosition }: PostProps) {
   const { publishedAt, slug, title, image } = post;
-  
+
   const imageHeight = 150;
   const imageWidth = 300;
   const imageOffset = 24;
@@ -50,29 +49,12 @@ export default function Post({ post, mousePosition }: PostProps) {
             </Link>
           </Section>
           <div className="min-w-24 relative flex aspect-square h-24 w-24 items-center justify-center rounded-md border border-secondary bg-secondary shadow-sm md:hidden">
-            {image ? (
-              <Image
-                src={image}
-                alt={title}
-                fill
-                className="rounded-md object-cover"
-              />
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="h-6 w-6 text-secondary"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
-                />
-              </svg>
-            )}
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="rounded-md object-cover"
+            />
           </div>
         </div>
       </div>

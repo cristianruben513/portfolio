@@ -27,13 +27,10 @@ export default function BlogPage() {
   return (
     <Container className="flex flex-col gap-16 md:gap-24 min-h-screen">
       <PageHeader title="Mi Blog">
-        {posts.length} Articulos hasta ahora, pero faltan muchos más por venir!
+        {posts.length} Articulos hasta ahora, ¡pero faltan muchos más por venir!
       </PageHeader>
 
-      <div
-        className="animate-in"
-        style={{ "--index": 1 } as React.CSSProperties}
-      >
+      <div className="animate-in">
         <PostList posts={posts} />
       </div>
     </Container>
