@@ -16,6 +16,7 @@ const links = [
   { label: "Inicio", href: "/" },
   { label: "Proyectos", href: "/projects" },
   { label: "Sobre Mi", href: "/about" },
+  { label: "CV", href: "https://cristian-cv.vercel.app/" },
   { label: "Blog", href: "/blog" },
   { label: "Recomendaciones", href: "/recommendations" },
 ];
