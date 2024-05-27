@@ -1,5 +1,5 @@
 import { allProjects } from ".contentlayer/generated";
-import Mdx from "@/app/blog/components/MdxWrapper";
+import Mdx from "@/app/[locale]/blog/components/MdxWrapper";
 import Container from "@/app/components/Container";
 import Link from "@/app/components/ui/Link";
 import type { Metadata } from "next";

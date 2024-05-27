@@ -1,0 +1,96 @@
+{
+  "lang_switch": {
+    "title": "Change language",
+    "es": "Spanish",
+    "en": "English"
+  },
+  "theme_switch": {
+    "title": "Change theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "metadata": {
+    "home": {
+      "title": "Cristian Ruben - Software Engineer",
+      "description": "Software Engineer and Fullstack Developer with over 3 years of experience in developing web applications and backend services."
+    },
+    "projects": {
+      "title": "Projects | Cristian Ruben",
+      "description": "Some of the projects I've worked on and am proud of."
+    },
+    "about": {
+      "title": "About Me | Cristian Ruben",
+      "description": "A little about my professional, educational, and personal life."
+    },
+    "blog": {
+      "title": "My Blog | Cristian Ruben",
+      "description": "Writing about programming, design, and occasionally life updates!"
+    },
+    "recommendations": {
+      "title": "Recommendations | Cristian Ruben",
+      "description": "Devices, Software, Books, Music, and more that I like, use, and recommend."
+    },
+    "notfound": {
+      "title": "404 Not Found | Cristian Ruben",
+      "description": "The page you're looking for doesn't exist."
+    }
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "about": "About Me",
+      "resume": "CV",
+      "blog": "Blog",
+      "recommendations": "Recommendations"
+    }
+  },
+  "home": {
+    "hero": {
+      "1": "Software Engineer",
+      "2": "and Fullstack Programmer with",
+      "3": "+3 years of experience",
+      "4": "in web application development and backend services."
+    },
+    "title": "Cristian Ruben - Software Engineer",
+    "description": "Software Engineer and Fullstack Programmer with +3 years of experience in web application development and backend services.",
+    "blog": {
+      "title": "Latest Articles",
+      "subtitle": "Occasionally, I write about programming, productivity, and more."
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Some of the projects I've worked on and I'm proud of."
+  },
+  "about": {
+    "title": "About Me",
+    "description": "A little bit about my professional, educational and personal life.",
+    "sections": {
+      "about": {
+        "title": "About Me",
+        "content1": "Hi, I'm Cristian Ruben, I live in Guanajuato, Mexico. I've been programming since I was 16, I'm a software engineer and I specialize in web development and product design.",
+        "content2": "When I'm not working at my desk, I'm probably listening to a podcast, playing soccer with my brother, or enjoying life."
+      },
+      "contact": {
+        "title": "Contact"
+      },
+      "education": {
+        "title": "Education",
+        "content": "I specialize in JavaScript, React and web development, with experience in UI/UX. Currently, I'm expanding my skills in infrastructure, DevOps and optimization."
+      }
+    }
+  },
+  "blog": {
+    "title": "My Blog",
+    "description": "Articles so far, but many more to come!"
+  },
+  "recommendations": {
+    "title": "Recommendations",
+    "description": "Devices, Software, Books, Music, and more that I like, use, and recommend."
+  },
+  "notfound": {
+    "description": "It seems that this page does not exist. Please check the URL and try again.",
+    "action": "Go back to the homepage"
+  }
+}

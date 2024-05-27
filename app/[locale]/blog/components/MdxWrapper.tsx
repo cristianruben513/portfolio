@@ -1,18 +1,18 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
 
-import CustomImage from "@/app/blog/components/Image";
-import Link from "@/app/components/ui/Link";
+import CustomImage from "@/app/[locale]/blog/components/Image";
 import Map from "@/app/components/bento/Map";
+import Link from "@/app/components/ui/Link";
 import Alert from "./mdx/Alert";
+import LinkPreview from "./mdx/LinkPreview";
 import Weather from "./mdx/Weather";
 import WeatherList from "./mdx/WeatherList";
-import LinkPreview from "./mdx/LinkPreview";
 
 interface CustomLinkProps
   extends React.DetailedHTMLProps<
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
-  > {}
+  > { }
 
 const CustomLink: React.FC<CustomLinkProps> = (props) => {
   const href = props?.href;

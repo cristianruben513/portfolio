@@ -31,7 +31,7 @@ export default function YouTube() {
       </div>
 
       <ul className="animated-list grid w-full grid-cols-2 grid-rows-2 gap-3">
-        <li className="overflow-hidden rounded-lg transition-opacity">
+        <li className="overflow-hidden rounded-lg transition-opacity cursor-pointer">
           <Image
             src={project1}
             alt="Thumbnail"
@@ -39,7 +39,7 @@ export default function YouTube() {
             priority
           />
         </li>
-        <li className="overflow-hidden rounded-lg transition-opacity">
+        <li className="overflow-hidden rounded-lg transition-opacity cursor-pointer">
           <Image
             src={project2}
             alt="Thumbnail"
@@ -47,7 +47,7 @@ export default function YouTube() {
             priority
           />
         </li>
-        <li className="overflow-hidden rounded-lg transition-opacity">
+        <li className="overflow-hidden rounded-lg transition-opacity cursor-pointer">
           <Image
             src={project3}
             alt="Thumbnail"
@@ -55,7 +55,7 @@ export default function YouTube() {
             priority
           />
         </li>
-        <li className="overflow-hidden rounded-lg transition-opacity">
+        <li className="overflow-hidden rounded-lg transition-opacity cursor-pointer">
           <Image
             src={project4}
             alt="Thumbnail"

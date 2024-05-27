@@ -2,12 +2,15 @@ import { Listbox } from "@headlessui/react";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, Moon, Sun } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme, resolvedTheme } = useTheme();
+
+  const t = useTranslations("theme_switch");
 
   useEffect(() => {
     setMounted(true);
@@ -32,12 +35,12 @@ export default function ThemeSwitcher() {
               {resolvedTheme === "dark" ? (
                 <>
                   <Moon className={iconClassName} />
-                  <span className="sr-only">Modo Oscuro</span>
+                  <span className="sr-only">{t('dark')}</span>
                 </>
               ) : (
                 <>
                   <Sun className={iconClassName} />
-                  <span className="sr-only">Modo Claro</span>
+                  <span className="sr-only">{t('light')}</span>
                 </>
               )}
             </Listbox.Button>
@@ -59,7 +62,7 @@ export default function ThemeSwitcher() {
                     )}
                     value="dark"
                   >
-                    <span>Oscuro</span>
+                    <span>{t('dark')}</span>
                     {resolvedTheme === "dark" && (
                       <span className="absolute inset-y-0 left-0 flex items-center pl-3 dark:text-neutral-50">
                         <Check
@@ -76,7 +79,7 @@ export default function ThemeSwitcher() {
                     )}
                     value="light"
                   >
-                    <span>Claro</span>
+                    <span>{t('light')}</span>
                     {resolvedTheme === "light" && (
                       <span className="absolute inset-y-0 left-0 flex items-center pl-3 dark:text-neutral-50">
                         <Check

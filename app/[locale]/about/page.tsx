@@ -1,39 +1,47 @@
-import { type Metadata } from "next";
 import Image from "next/image";
 
+import ConnectLinks from "@/app/components/ConnectLinks";
+import Container from "@/app/components/Container";
+import PageHeader from "@/app/components/Header";
 import Section from "@/app/components/Section";
 import Link from "@/app/components/ui/Link";
+import { MetadataProps } from "@/types/metadata";
 import { MoveUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import meLily from "public/gallery/1_1.jpg";
 import colorado from "public/gallery/4.jpg";
 import perishipLogo from "public/work/cbtis.jpeg";
 import hinesLogo from "public/work/uppe.jpg";
-import ConnectLinks from "../components/ConnectLinks";
-import Container from "../components/Container";
-import PageHeader from "../components/Header";
 import Gallery from "./components/Gallery";
 import Workplaces from "./components/Workplaces";
 
-const title = "Sobre Mi | Cristian Ruben";
-const description = "Un poquito de mi vida profesional, educativa y personal.";
+export async function generateMetadata({ params: { locale } }: MetadataProps) {
+  const t = await getTranslations({ locale, namespace: 'metadata' });
 
-export const metadata: Metadata = {
-  title,
-  description,
-  openGraph: {
-    title,
-    description,
-    type: "website",
-    url: "https://cristian.digital/about",
-    images: [{ url: "https://cristian.digital/api/og?title=Sobre+Mi", alt: "Acerca de mi" }],
-  }
-};
+  return {
+    title: t('about.title'),
+    description: t('about.description'),
+    openGraph: {
+      title: t('about.title'),
+      description: t('about.description'),
+      type: "website",
+      url: "https://cristian.digital",
+      images: [{
+        url: "https://cristian.digital/og_image.webp",
+        alt: "Cristian Ruben"
+      }],
+    }
+  };
+}
 
 export default function About() {
+  const t = useTranslations('about');
+
   return (
     <Container className="flex flex-col gap-16 md:gap-24">
-      <PageHeader title="Sobre Mi">
-        Un poquito de mi vida profesional, educativa y personal.
+      <PageHeader title={t('title')}>
+        {t('description')}
       </PageHeader>
 
       <div className="md:mb-8 mb-20 md:hidden">
@@ -74,18 +82,20 @@ export default function About() {
         className="flex animate-in flex-col gap-16 md:gap-24"
         style={{ "--index": 3 } as React.CSSProperties}
       >
-        <Section heading="Acerca de mi" headingAlignment="left">
+        <Section 
+          heading={t('sections.about.title')} 
+          headingAlignment="left"
+        >
           <div className="flex flex-col gap-6 leading-loose">
-            <p>
-              Hola, soy Cristian Ruben, vivo en Guanajuato, Mexico. Llevo desde los 16 años programando, soy un ingeniero en software y me especializo en desarrollo web y diseño de productos.
-            </p>
-            <p>
-              Cuando no estoy trabajando en mi escritorio, probablemente estoy escuchando un podcast, jugando futbol con mi hermano, o disfrutando de la vida.
-            </p>
+            <p>{t('sections.about.content1')}</p>
+            <p>{t('sections.about.content2')}</p>
           </div>
         </Section>
 
-        <Section heading="Contacto" headingAlignment="left">
+        <Section 
+          heading={t('sections.contact.title')} 
+          headingAlignment="left"
+        >
           <ul className="animated-list grid flex-grow grid-cols-1 gap-3 md:grid-cols-2">
             {ConnectLinks.map((link) => (
               <li className="col-span-1 transition-opacity" key={link.label}>
@@ -104,15 +114,15 @@ export default function About() {
           </ul>
         </Section>
 
-        <Section heading="Educacion" headingAlignment="left">
+        <Section 
+          heading={t('sections.education.title')}
+          headingAlignment="left"
+        >
           <div className="flex w-full flex-col gap-8">
-            <p>
-              Me especializo en JavaScript, React y desarrollo web, con experiencia en UI/UX. Actualmente, estoy ampliando mis habilidades en infraestructura, DevOps y optimización
-            </p>
+            <p>{t('sections.education.content')}</p>
             <Workplaces items={workplaces} />
           </div>
         </Section>
-
       </div>
     </Container>
   );

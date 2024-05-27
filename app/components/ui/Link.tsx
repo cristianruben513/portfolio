@@ -1,4 +1,4 @@
-import NextLink, { LinkProps as NextLinkProps } from "next/link";
+import { Link as NextLink } from "@/navigation";
 import clsx from "clsx";
 import { ReactNode } from "react";
 
@@ -6,7 +6,8 @@ type LinkProps = {
   children: ReactNode;
   className?: string;
   underline?: boolean;
-} & NextLinkProps;
+  href: any
+}
 
 export default function Link(props: LinkProps) {
   const isExternal = !props.href.toString().startsWith("/");
@@ -14,6 +15,7 @@ export default function Link(props: LinkProps) {
   return (
     <NextLink
       {...rest}
+      href={rest.href as any}
       className={clsx(
         "underline-offset-4",
         (isExternal || underline) && "underline",

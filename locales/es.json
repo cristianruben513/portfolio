@@ -1,0 +1,96 @@
+{
+  "lang_switch": {
+    "title": "Cambiar Idioma",
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "theme_switch": {
+    "title": "Cambiar Tema",
+    "light": "Claro",
+    "dark": "Oscuro"
+  },
+  "metadata": {
+    "home": {
+      "title": "Cristian Ruben - Ingeniero en Software",
+      "description": "Ingeniero en Software y Programador Fullstack con +3 años de experiencia en el desarrollo de aplicaciones web y servicios de backend."
+    },
+    "projects": {
+      "title": "Proyectos | Cristian Ruben",
+      "description": "Algunos de los proyectos en los que he trabajado y de los que estoy orgulloso."
+    },
+    "about": {
+      "title": "Sobre Mi | Cristian Ruben",
+      "description": "Un poquito de mi vida profesional, educativa y personal."
+    },
+    "blog": {
+      "title": "Mi Blog | Cristian Ruben",
+      "description": "Escribiendo sobre programación, diseño y ocasionalmente actualizaciones de la vida!"
+    },
+    "recommendations": {
+      "title": "Recomendaciones | Cristian Ruben",
+      "description": "Dispositivos, Software, Libros, Musica, y más que me gusta, uso, y recomiendo."
+    },
+    "notfound": {
+      "title": "404 | Pagina no encontrada",
+      "description": "La pagina que buscas no existe o ha sido movida."
+    }
+  },
+  "header": {
+    "nav": {
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "about": "Sobre Mi",
+      "resume": "CV",
+      "blog": "Blog",
+      "recommendations": "Recomendaciones"
+    }
+  },
+  "home": {
+    "hero": {
+      "1": "Ingeniero en Software",
+      "2": "y Programador Fullstack con",
+      "3": "+3 años de experiencia",
+      "4": "en el desarrollo de aplicaciones web y servicios de backend."
+    },
+    "title": "Cristian Ruben - Ingeniero en Software",
+    "description": "Ingeniero en Software y Programador Fullstack con +3 años de experiencia en el desarrollo de aplicaciones web y servicios de backend.",
+    "blog": {
+      "title": "Ultimos Articulos",
+      "subtitle": "Ocasionalmente escribo sobre programación, productividad y más."
+    }
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "description": "Algunos de los proyectos en los que he trabajado y de los que estoy orgulloso."
+  },
+  "about": {
+    "title": "Sobre Mi",
+    "description": "Un poquito de mi vida profesional, educativa y personal.",
+    "sections": {
+      "about": {
+        "title": "Acerca de Mi",
+        "content1": "Hola, soy Cristian Ruben, vivo en Guanajuato, Mexico. Llevo desde los 16 años programando, soy un ingeniero en software y me especializo en desarrollo web y diseño de productos.",
+        "content2": "Cuando no estoy trabajando en mi escritorio, probablemente estoy escuchando un podcast, jugando futbol con mi hermano, o disfrutando de la vida."
+      },
+      "contact": {
+        "title": "Contacto"
+      },
+      "education": {
+        "title": "Educación",
+        "content": "Me especializo en JavaScript, React y desarrollo web, con experiencia en UI/UX. Actualmente, estoy ampliando mis habilidades en infraestructura, DevOps y optimización"
+      }
+    }
+  },
+  "blog": {
+    "title": "Mi Blog",
+    "description": "Articulos hasta ahora, ¡pero faltan muchos más por venir!"
+  },
+  "recommendations": {
+    "title": "Recomendaciones",
+    "description": "Dispositivos, Software, Libros, Musica, y más que me gusta, uso, y recomiendo."
+  },
+  "notfound": {
+    "description": "Parece que esta página no existe. Por favor, verifica la URL e intenta de nuevo.",
+    "action": "Volver a la página de inicio"
+  }
+}

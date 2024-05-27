@@ -1,29 +1,38 @@
 import { allPosts } from ".contentlayer/generated";
-import PostList from "@/app/blog/components/PostList";
+import PostList from "@/app/[locale]/blog/components/PostList";
 import BentoGrid from "@/app/components/bento/BentoGrid";
 import Link from "@/app/components/ui/Link";
 import Me from "@/public/avatar.webp";
 import { MoveUpRight } from "lucide-react";
-import { type Metadata } from "next";
+import { useTranslations } from "next-intl";
+import { getTranslations } from 'next-intl/server';
 import Image from "next/image";
-import Container from "./components/Container";
-import { Photos } from "./components/photos";
+import Container from "../components/Container";
+import { Photos } from "../components/photos";
+import { MetadataProps } from "@/types/metadata";
 
-const description = "Ingeniero en Software y Programador Fullstack con +3 años de experiencia en el desarrollo de aplicaciones web y servicios de backend.";
+export async function generateMetadata({ params: { locale } }: MetadataProps) {
+  const t = await getTranslations({ locale, namespace: 'metadata' });
 
-export const metadata: Metadata = {
-  title: "Cristian Ruben - Ingeniero en Software",
-  description,
-  openGraph: {
-    title: "Cristian Ruben - Ingeniero en Software",
-    description,
-    type: "website",
-    url: "https://cristian.digital",
-    images: [{ url: "https://cristian.digital/og_image.webp", alt: "Cristian Ruben" }],
-  }
-};
+  return {
+    title: t('home.title'),
+    description: t('home.description'),
+    openGraph: {
+      title: t('home.title'),
+      description: t('home.description'),
+      type: "website",
+      url: "https://cristian.digital",
+      images: [{
+        url: "https://cristian.digital/og_image.webp",
+        alt: "Cristian Ruben"
+      }],
+    }
+  };
+}
 
 export default function Home() {
+  const t = useTranslations("home");
+
   const posts = allPosts
     .sort((a, b) =>
       new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
@@ -51,13 +60,13 @@ export default function Home() {
 
         <h2 className="max-w-xl text-secondary text-pretty -mt-2">
           <span className="font-bold text-blue-700 dark:text-blue-300">
-            Ingeniero en Software
+            {t("hero.1")}
           </span> {""}
-          y Programador Fullstack con {""}
+          {t("hero.2")}{" "}
           <span className="italic text-orange-700 dark:text-yellow-200">
-            +3 años de experiencia
-          </span> {""}
-          en el desarrollo de aplicaciones web y servicios de backend.
+            {t("hero.3")}
+          </span> {" "}
+          {t("hero.4")}
         </h2>
       </Container>
 
@@ -73,15 +82,15 @@ export default function Home() {
             className="group flex items-center gap-2 text-xl font-semibold tracking-tight text-primary"
             href="/blog"
           >
-            Ultimos Articulos
+            {t("blog.title")}
             <MoveUpRight className="size-5 text-tertiary transition-all group-hover:text-primary" />
           </Link>
 
           <p className="max-w-lg text-secondary">
-            Ocasionalmente escribo sobre programación, productividad y más.
+            {t("blog.subtitle")}
           </p>
         </div>
-        
+
         <PostList posts={posts} />
       </Container>
     </div>

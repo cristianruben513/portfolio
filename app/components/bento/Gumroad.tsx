@@ -7,7 +7,7 @@ import { IoMail } from "react-icons/io5";
 export default function Gumroad() {
   const links = [
     {
-      href: "https://wa.me/+523330632525",
+      href: "https://wa.me/+523339632525",
       icon: <FaWhatsapp />,
       styles: "bg-[#25D366] text-white",
       arialabel: "Contactame a traves de WhatsApp"

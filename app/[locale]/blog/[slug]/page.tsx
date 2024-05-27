@@ -1,6 +1,6 @@
 import { allPosts } from ".contentlayer/generated";
+import Mdx from "@/app/[locale]/blog/components/MdxWrapper";
 import { formatDate } from "@/app/_utils/formatDate";
-import Mdx from "@/app/blog/components/MdxWrapper";
 import Container from "@/app/components/Container";
 import Tags from "@/app/components/Tags";
 import Me from "@/public/avatar.webp";
@@ -90,7 +90,7 @@ export default async function Blog({ params }: { params: any }) {
               alt={`${post.title} post image`}
               width={700}
               height={350}
-              className="-ml-6 w-[calc(100%+48px)] max-w-none md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)] mt-8"
+              className="-ml-6 w-[calc(100%+48px)] max-w-none md:rounded-lg lg:ml-0 lg:w-full mt-8"
               priority
             />
           )}

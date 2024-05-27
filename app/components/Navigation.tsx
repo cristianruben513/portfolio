@@ -2,27 +2,30 @@
 
 import ThemeSwitcher from "@/app/components/ThemeSwitcher";
 import NavLink from "@/app/components/ui/NavLink";
+import { Link } from "@/navigation";
 import { Popover, PopoverButton, PopoverPanel, Transition } from "@headlessui/react";
 import clsx from "clsx";
 import { Menu } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Fragment } from "react";
 
 import icon from "@/app/icon.webp";
-
-const links = [
-  { label: "Inicio", href: "/" },
-  { label: "Proyectos", href: "/projects" },
-  { label: "Sobre Mi", href: "/about" },
-  { label: "CV", href: "https://cristian-cv.vercel.app/" },
-  { label: "Blog", href: "/blog" },
-  { label: "Recomendaciones", href: "/recommendations" },
-];
+import { useTranslations } from "next-intl";
+import LangSwitcher from "./LangSwitcher";
 
 export default function Navigation() {
-  const pathname = `/${usePathname().split("/")[1]}`; // active paths on dynamic sub-pages
+  const pathname = `/${usePathname().split("/")[1]}`;
+  const t = useTranslations("header")
+
+  const links = [
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.projects"), href: "/projects" },
+    { label: t("nav.about"), href: "/about" },
+    { label: t("nav.resume"), href: "https://cristian-cv.vercel.app/" },
+    { label: t("nav.blog"), href: "/blog" },
+    { label: t("nav.recommendations"), href: "/recommendations" },
+  ];
 
   return (
     <header className="md:mt-6">
@@ -45,6 +48,7 @@ export default function Navigation() {
         </ul>
 
         <div className="ml-auto flex h-8 w-8 items-center justify-center md:ml-0">
+          <LangSwitcher />
           <ThemeSwitcher />
         </div>
 
@@ -67,7 +71,7 @@ export default function Navigation() {
                 {links.map((link) => (
                   <Link
                     key={link.href}
-                    href={link.href}
+                    href={link.href as any}
                     className={clsx(
                       "rounded-md px-4 py-2 transition-colors hover:text-primary",
                       pathname === link.href

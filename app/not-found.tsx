@@ -1,26 +1,13 @@
-import Link from "@/app/components/ui/Link";
-import { Metadata } from "next";
-import Container from "./components/Container";
-
-export const metadata: Metadata = {
-  title: "404 | Cristian Ruben",
-  description: "Pagina no existente",
-};
-
-const Custom404 = (): JSX.Element => (
-  <Container className="flex flex-col gap-4">
-    <h1 className="text-4xl font-bold tracking-tight text-primary">
-      404
-    </h1>
-
-    <p className="text-secondary mb-2">
-      Parece que esta página no existe. Por favor, verifica la URL e intenta de nuevo.
-    </p>
-
-    <Link href="/" underline>
-      Regresar al inicio
-    </Link>
-  </Container>
-);
-
-export default Custom404;
+'use client';
+ 
+import Error from 'next/error';
+ 
+export default function NotFound() {
+  return (
+    <html lang="en">
+      <body>
+        <Error statusCode={404} />
+      </body>
+    </html>
+  );
+}

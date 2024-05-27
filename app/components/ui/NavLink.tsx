@@ -1,10 +1,11 @@
-import Link from "next/link";
+
 import { ReactNode } from "react";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import { Link } from "@/navigation";
 
 type NavLinkProps = {
-  href: string;
+  href: any
   children: ReactNode;
 };
 
