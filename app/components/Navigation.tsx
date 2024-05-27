@@ -2,12 +2,11 @@
 
 import ThemeSwitcher from "@/app/components/ThemeSwitcher";
 import NavLink from "@/app/components/ui/NavLink";
-import { Link } from "@/navigation";
+import { Link, usePathname } from "@/navigation";
 import { Popover, PopoverButton, PopoverPanel, Transition } from "@headlessui/react";
 import clsx from "clsx";
 import { Menu } from "lucide-react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { Fragment } from "react";
 
 import icon from "@/app/icon.webp";
@@ -68,20 +67,22 @@ export default function Navigation() {
           >
             <PopoverPanel className="absolute right-0 z-10 mt-2 w-48 origin-top-right overflow-auto rounded-xl p-2 text-base sm:text-sm bg-neutral-200 dark:bg-black">
               <div className="grid">
-                {links.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href as any}
-                    className={clsx(
-                      "rounded-md px-4 py-2 transition-colors hover:text-primary",
-                      pathname === link.href
-                        ? "bg-secondary font-medium"
-                        : "font-normal",
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {links.map((link) => {
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href as any}
+                      className={clsx(
+                        "rounded-md px-4 py-2 transition-colors hover:text-primary",
+                        pathname === link.href
+                          ? "bg-secondary font-medium"
+                          : "font-normal",
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                  )
+                })}
               </div>
             </PopoverPanel>
           </Transition>
