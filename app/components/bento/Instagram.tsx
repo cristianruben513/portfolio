@@ -10,7 +10,7 @@ export default function Instagram() {
       </div>
 
       <p className="text-secondary">Cristian Ruben</p>
-      <p className="line-clamp-2">Conoce mas de mi con mi curriculum</p>
+      <p className="line-clamp-2">Mi Trayectoria</p>
 
       <Link
         className="mt-auto flex w-fit items-center gap-1.5 rounded-full bg-tertiary px-4 py-1.5 text-sm no-underline"

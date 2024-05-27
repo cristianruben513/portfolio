@@ -70,7 +70,7 @@ export default function Home() {
         </h2>
       </Container>
 
-      <Container className="animate-in">
+      <Container className="animate-in w-full">
         <BentoGrid />
       </Container>
 
