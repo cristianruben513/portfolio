@@ -51,9 +51,18 @@ module.exports = {
           "0%": { transform: "translateY(18px)", opacity: 0 },
           "100%": { transform: "translateY(0)", opacity: 1 },
         },
+        orbit: {
+          "0%": {
+            transform: "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
       },
       animation: {
         in: "in .6s both",
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
       },
     },
   },
