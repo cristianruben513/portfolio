@@ -36,7 +36,7 @@ export default function Gumroad() {
     <Card className="flex aspect-square flex-col gap-1.5">
 
       <div className="hidden md:flex gap-2 aspect-square size-8 items-center justify-center rounded-lg bg-[#f86cd9] py-1.5">
-        <Sparkles size={18} className="text-primary" />
+        <Sparkles size={18} className="text-white" />
       </div>
 
       <p className="text-secondary hidden md:block">Contacto</p>

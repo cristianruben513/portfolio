@@ -75,9 +75,27 @@
       "contact": {
         "title": "Contacto"
       },
+      "work": {
+        "title": "Work",
+        "content": "He trabajado como freelancer por más de 3 años, desarrollando aplicaciones web y servicios backend, ayudando a pequeñas empresas con su presencia en la web.",
+        "places": {
+          "dorichangos": {
+            "title": "Dorichangos",
+            "content": "Desarrollé una plataforma de comercio electrónico para Dorichangos, facilitando la compra de productos. Implementé un dashboard para administrar productos y pedidos, mejorando la eficiencia operativa."
+          }
+        }
+      },
       "education": {
         "title": "Educación",
-        "content": "Me especializo en JavaScript, React y desarrollo web, con experiencia en UI/UX. Actualmente, estoy ampliando mis habilidades en infraestructura, DevOps y optimización"
+        "content": "Me especializo en JavaScript, React y desarrollo web, con experiencia en UI/UX. Actualmente, estoy ampliando mis habilidades en infraestructura, DevOps y optimización",
+        "places": {
+          "cbtis": {
+            "title": "Técnico en Programación"
+          },
+          "uppe": {
+            "title": "Licenciatura en Ingeniería en Software"
+          }
+        }
       }
     }
   },

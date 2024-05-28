@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import ConnectLinks from "@/app/components/ConnectLinks";
 import Container from "@/app/components/Container";
 import PageHeader from "@/app/components/Header";
@@ -9,12 +7,16 @@ import { MetadataProps } from "@/types/metadata";
 import { MoveUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import Gallery from "./components/Gallery";
+import Workplaces from "./components/Workplaces";
+
+import Image from "next/image";
 import meLily from "public/gallery/1_1.jpg";
 import colorado from "public/gallery/4.jpg";
 import perishipLogo from "public/work/cbtis.jpeg";
+import dorichangos from "public/work/dorichangos.jpg";
 import hinesLogo from "public/work/uppe.jpg";
-import Gallery from "./components/Gallery";
-import Workplaces from "./components/Workplaces";
+
 
 export async function generateMetadata({ params: { locale } }: MetadataProps) {
   const t = await getTranslations({ locale, namespace: 'metadata' });
@@ -37,6 +39,32 @@ export async function generateMetadata({ params: { locale } }: MetadataProps) {
 
 export default function About() {
   const t = useTranslations('about');
+
+  const educationplaces = [
+    {
+      title: t('sections.education.places.uppe.title'),
+      company: "Politécnica de Pénjamo - Guanajuato, México",
+      time: "2021 - 2024",
+      imageSrc: hinesLogo,
+      link: "https://uppenjamo.edu.mx/",
+    },
+    {
+      title: t('sections.education.places.cbtis.title'),
+      company: "CBTIS 171 - Guanajuato, México",
+      time: "2018 - 2021",
+      imageSrc: perishipLogo,
+    },
+  ];
+
+  const workplaces = [
+    {
+      title: "Freelancer",
+      company: t('sections.work.places.dorichangos.title'),
+      time: "2023 - 2024",
+      imageSrc: dorichangos,
+      description: t('sections.work.places.dorichangos.content'),
+    },
+  ];
 
   return (
     <Container className="flex flex-col gap-16 md:gap-24">
@@ -82,8 +110,8 @@ export default function About() {
         className="flex animate-in flex-col gap-16 md:gap-24"
         style={{ "--index": 3 } as React.CSSProperties}
       >
-        <Section 
-          heading={t('sections.about.title')} 
+        <Section
+          heading={t('sections.about.title')}
           headingAlignment="left"
         >
           <div className="flex flex-col gap-6 leading-loose">
@@ -92,13 +120,13 @@ export default function About() {
           </div>
         </Section>
 
-        <Section 
-          heading={t('sections.contact.title')} 
+        <Section
+          heading={t('sections.contact.title')}
           headingAlignment="left"
         >
           <ul className="animated-list grid flex-grow grid-cols-1 gap-3 md:grid-cols-2">
             {ConnectLinks.map((link) => (
-              <li className="col-span-1 transition-opacity" key={link.label}>
+              <li className="col-span-1 transition-opacity group" key={link.label}>
                 <Link
                   href={link.href}
                   className="inline-grid w-full rounded-lg bg-neutral-200 dark:bg-black p-4 no-underline transition-opacity text-primary"
@@ -106,7 +134,7 @@ export default function About() {
                   <div className="flex items-center gap-3">
                     <span className="text-xl">{link.icon}</span>
                     {link.label}
-                    <MoveUpRight className="ml-auto" size={20} />
+                    <MoveUpRight className="ml-auto group-hover:rotate-45 transition-transform duration-300" size={20} />
                   </div>
                 </Link>
               </li>
@@ -114,31 +142,26 @@ export default function About() {
           </ul>
         </Section>
 
-        <Section 
+        <Section
+          heading={t('sections.work.title')}
+          headingAlignment="left"
+        >
+          <div className="flex w-full flex-col gap-8">
+            <p>{t('sections.work.content')}</p>
+            <Workplaces items={workplaces} />
+          </div>
+        </Section>
+
+        <Section
           heading={t('sections.education.title')}
           headingAlignment="left"
         >
           <div className="flex w-full flex-col gap-8">
             <p>{t('sections.education.content')}</p>
-            <Workplaces items={workplaces} />
+            <Workplaces items={educationplaces} />
           </div>
         </Section>
       </div>
     </Container>
   );
 }
-
-const workplaces = [
-  {
-    title: "Ingeniero en Software",
-    company: "Politécnica de Pénjamo",
-    time: "2021 - 2024",
-    imageSrc: hinesLogo,
-  },
-  {
-    title: "Técnico en Programación",
-    company: "CBTIS 171",
-    time: "2018 - 2021",
-    imageSrc: perishipLogo,
-  },
-];

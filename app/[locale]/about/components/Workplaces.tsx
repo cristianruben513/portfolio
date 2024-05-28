@@ -1,3 +1,5 @@
+import clsx from "clsx";
+import { MoveUpRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 
 type Workplace = {
@@ -6,32 +8,52 @@ type Workplace = {
   imageSrc: string | StaticImageData;
   time?: string;
   link?: string;
+  description?: string;
 };
 
-function Workplace({ title, company, imageSrc, time, link }: Workplace) {
-
-  const content = (
-    <>
-      <div className="flex items-center gap-4">
-        <Image
-          src={imageSrc}
-          alt={company}
-          width={48}
-          height={48}
-          className="rounded-full"
-        />
-        <div className="flex flex-col gap-px md:text-base text-sm">
-          <p className={link ? "external-arrow" : ""}>{title}</p>
-          <p className="text-green-200 md:text-base text-sm">{company}</p>
-        </div>
-      </div>
-      {time && <time className="text-secondary md:text-base text-xs">{time}</time>}
-    </>
-  );
-
+function Workplace({ title, company, imageSrc, time, link, description }: Workplace) {
   return (
-    <li className="transition-opacity" key={company}>
-      <div className="flex justify-between ">{content}</div>
+    <li className="transition-opacity relative" key={company}>
+      <div className="flex justify-between">
+        <div className={clsx(
+          "flex gap-4",
+          description ? "items-start" : "items-center"
+        )}>
+          <Image
+            src={imageSrc}
+            alt={company}
+            width={48}
+            height={48}
+            className="rounded-full"
+          />
+          <div className="flex flex-col gap-px md:text-base text-sm">
+            <p className="gap-2 flex items-center">
+              {title}
+              {link && (<MoveUpRight size={14} />)}
+            </p>
+            <p className="text-green-200 md:text-base text-sm">{company}</p>
+            {description && (
+              <p className="text-primary text-sm mt-3 dark:text-blue-200 text-blue-600">
+                {description}
+              </p>
+            )}
+          </div>
+        </div>
+        {time && (
+          <time className="text-secondary md:text-base text-xs fixed right-0 top-0">
+            {time}
+          </time>
+        )}
+      </div>
+      {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute inset-0"
+        >
+        </a>
+      )}
     </li>
   );
 }

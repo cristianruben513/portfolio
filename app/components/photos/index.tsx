@@ -3,7 +3,7 @@ import { Photo } from './PhotoItem';
 
 export const Photos = () => {
   return (
-    <div className="hide-scrollbar flex gap-8 overflow-y-auto py-4 px-8">
+    <div className="hide-scrollbar flex gap-6 lg:gap-8 overflow-y-auto py-2 lg:py-4 px-8">
       {myImages.map((travelImage) => (
         <Photo
           key={travelImage.img.src}
