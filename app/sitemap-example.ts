@@ -5,7 +5,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://cristian.digital',
       lastModified: new Date(),
-      priority: 1,
       alternates: {
         languages: {
           es: 'https://cristian.digital/es',
@@ -16,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://cristian.digital/about',
       lastModified: new Date(),
-      priority: 0.9,
       alternates: {
         languages: {
           es: 'https://cristian.digital/es/sobre-mi',
@@ -27,7 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://cristian.digital/blog',
       lastModified: new Date(),
-      priority: 0.8,
       alternates: {
         languages: {
           es: 'https://cristian.digital/es/blog',
@@ -38,7 +35,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://cristian.digital/projects',
       lastModified: new Date(),
-      priority: 0.8,
       alternates: {
         languages: {
           es: 'https://cristian.digital/es/proyectos',
@@ -49,7 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://cristian.digital/recommendations',
       lastModified: new Date(),
-      priority: 0.8,
       alternates: {
         languages: {
           es: 'https://cristian.digital/es/recomendaciones',
