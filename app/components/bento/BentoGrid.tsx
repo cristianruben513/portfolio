@@ -4,6 +4,7 @@ import Instagram from "@/app/components/bento/Instagram";
 import Map from "@/app/components/bento/Map";
 import YouTube from "@/app/components/bento/Projects";
 import About from "./About";
+import TestOrbit from "./TestOrbit";
 
 export default function BentoGrid() {
   return (
@@ -22,6 +23,7 @@ export default function BentoGrid() {
           <p className="text-sm font-medium text-primary">Guanajuato, MX</p>
         </div>
       </Card>
+      {/* <TestOrbit /> */}
     </div>
   );
 }

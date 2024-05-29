@@ -15,7 +15,7 @@ export default function About() {
         className="mt-auto flex w-fit items-center gap-1.5 rounded-full bg-tertiary px-4 py-1.5 text-sm no-underline"
         href="/about"
       >
-        <span className="font-medium text-primary">Acerca de Mi</span>
+        <span className="font-medium text-primary">Sobre Mi</span>
         <MoveUpRight size={18} />
       </Link>
     </Card>
