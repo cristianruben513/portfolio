@@ -1,15 +1,15 @@
 import { StaticImageData } from "next/image"
 
-import flor2 from "./18.webp"
-import vaquita from "./19.webp"
-import pelos from "./21.webp"
-import ixtapa from "./23.webp"
-import solovino from "./24.webp"
-import michi from "./25.webp"
-import siri from "./29.webp"
-import gatita from "./31.webp"
-import hades from "./33.webp"
-import mapacha from "./7.webp"
+import flor2 from "./18_th.webp"
+import vaquita from "./19_th.webp"
+import pelos from "./21_th.webp"
+import ixtapa from "./23_th.webp"
+import solovino from "./24_th.webp"
+import michi from "./25_th.webp"
+import siri from "./29_th.webp"
+import gatita from "./31_th.webp"
+import hades from "./33_th.webp"
+import mapacha from "./7_th.webp"
 
 interface Image {
   img: StaticImageData;
