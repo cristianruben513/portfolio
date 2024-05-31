@@ -4,7 +4,7 @@ import { Sparkles } from "lucide-react";
 import { FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 
-export default function Gumroad() {
+export default function Contact() {
   const links = [
     {
       href: "https://wa.me/+523339632525",

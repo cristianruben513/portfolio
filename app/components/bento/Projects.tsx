@@ -30,7 +30,7 @@ export default function YouTube() {
         </Link>
       </div>
 
-      <ul className="animated-list grid w-full grid-cols-2 grid-rows-2 gap-3">
+      <ul className="animated-list grid w-full grid-cols-2 grid-rows-2 gap-3 z-10">
         <li className="overflow-hidden rounded-lg transition-opacity cursor-pointer">
           <Image
             src={project1}

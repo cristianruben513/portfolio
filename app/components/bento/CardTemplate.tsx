@@ -1,27 +1,29 @@
 import clsx from "clsx";
-import Halo from "@/app/components/ui/Halo";
+import Meteors from "../magic-ui/Meteors";
 
 export default function Card({
   children,
   className,
   disableHalo,
   noPadding,
+  noMeteors
 }: {
   children: React.ReactNode;
   className: string;
   disableHalo?: boolean;
   noPadding?: boolean;
+  noMeteors?: boolean;
 }) {
   return (
-    <Halo
-      strength={disableHalo ? 0 : 5}
+    <div
       className={clsx(
-        "h-full w-full overflow-clip rounded-xl bg-primary text-sm border border-secondary",
+        "h-full w-full overflow-hidden relative rounded-xl bg-primary text-sm border border-secondary",
         noPadding ? "p-0" : "p-4 md:p-6",
         className,
       )}
     >
+      {!noMeteors && <Meteors number={40} />}
       {children}
-    </Halo>
+    </div>
   );
 }
