@@ -50,12 +50,12 @@ export default function LangSwitcher() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ type: "spring", bounce: 0.3, duration: 0.3 }}
-                  className="w-42 absolute right-0 z-10 mt-2 max-h-60 origin-top-right overflow-auto rounded-xl bg-neutral-200 dark:bg-black p-2 text-base capitalize sm:text-sm"
+                  className="w-42 absolute right-0 z-10 mt-2 max-h-60 origin-top-right overflow-auto rounded-xl bg-white dark:bg-black p-2 text-base capitalize sm:text-sm"
                 >
                   <ListboxOption
                     className={clsx(
                       "relative cursor-default select-none rounded-md py-2 pl-10 pr-4",
-                      lang === "en" && "dark:bg-secondary bg-white"
+                      lang === "en" && "dark:bg-secondary bg-neutral-200"
                     )}
                     value="en"
                   >
@@ -69,7 +69,7 @@ export default function LangSwitcher() {
                   <ListboxOption
                     className={clsx(
                       "relative cursor-default select-none rounded-md py-2 pl-10 pr-4",
-                      lang === "es" && "dark:bg-secondary bg-white"
+                      lang === "es" && "dark:bg-secondary bg-neutral-200"
                     )}
                     value="es"
                   >

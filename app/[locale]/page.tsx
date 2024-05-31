@@ -47,10 +47,8 @@ export default function Home() {
           <Image
             src={Me}
             alt="Cristian Ruben"
-            width={1200}
-            height={1200}
-            priority
-            placeholder="blur"
+            width={400}
+            height={400}
           />
         </div>
 

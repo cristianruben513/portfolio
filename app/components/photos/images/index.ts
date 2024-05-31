@@ -1,9 +1,7 @@
 import { StaticImageData } from "next/image"
 
-import flor2 from "./18_th.webp"
 import vaquita from "./19_th.webp"
 import pelos from "./21_th.webp"
-import ixtapa from "./23_th.webp"
 import solovino from "./24_th.webp"
 import michi from "./25_th.webp"
 import siri from "./29_th.webp"
@@ -24,11 +22,6 @@ export const myImages: Image[] = [
     alt: "Fotografia de mi perrito Solovino DEP"
   },
   {
-    img: flor2,
-    title: "Flor",
-    alt: "Una flor muy bonita"
-  },
-  {
     img: vaquita,
     title: "Vaquita",
     alt: "Forto de una perrita"
@@ -37,11 +30,6 @@ export const myImages: Image[] = [
     img: pelos,
     title: "Pelos",
     alt: "Foto de mi perrito peludo DEP"
-  },
-  {
-    img: ixtapa,
-    title: "Ixtapa, Zihuatanejo",
-    alt: "Foto tomada en Ixtapa, Zihuatanejo"
   },
   {
     img: michi,
