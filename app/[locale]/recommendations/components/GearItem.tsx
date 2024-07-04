@@ -18,7 +18,7 @@ export const Item = ({ title, description, image }: ItemProps) => (
       />
     </div>
     <div>
-      <h3 className="line-clamp-2 font-medium leading-tight text-primary mb-1">
+      <h3 className="line-clamp-2 font-medium leading-tight mb-1">
         {title}
       </h3>
       <p className="line-clamp-3 text-sm leading-tight text-secondary">

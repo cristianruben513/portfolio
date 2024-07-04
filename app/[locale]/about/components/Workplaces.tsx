@@ -33,7 +33,7 @@ function Workplace({ title, company, imageSrc, time, link, description }: Workpl
             </p>
             <p className="text-green-200 md:text-base text-sm">{company}</p>
             {description && (
-              <p className="text-primary text-sm mt-3 dark:text-blue-200 text-blue-600">
+              <p className="text-sm mt-3 dark:text-blue-200 text-blue-600">
                 {description}
               </p>
             )}

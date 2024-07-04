@@ -61,7 +61,7 @@ export default function Project({ params }: { params: any }) {
               )}
             </div>
 
-            <h1 className="text-3xl font-bold leading-tight tracking-tight text-primary">
+            <h1 className="text-3xl font-bold leading-tight tracking-tight">
               {post.title}
             </h1>
 
@@ -72,7 +72,7 @@ export default function Project({ params }: { params: any }) {
 
           <div className="h-12" />
           <div
-            className="project prose prose-neutral animate-in text-pretty relative  w-full max-w-[800px]"
+            className="project prose prose-neutral animate-in relative w-full max-w-[800px]"
             style={{ "--index": 2 } as React.CSSProperties}
           >
             <Mdx code={post.body.code} />
@@ -92,7 +92,7 @@ export default function Project({ params }: { params: any }) {
             </p>
           </div>
 
-          <Link href="/projects" className="text-primary underline">
+          <Link href="/projects" className="underline">
             ← Todos los Proyectos
           </Link>
         </div>

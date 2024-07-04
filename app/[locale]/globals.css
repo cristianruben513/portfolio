@@ -14,14 +14,29 @@
 
 @import "@/public/prism/one-dark.css";
 
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 @layer base {
@@ -32,6 +47,7 @@
 
   .light {
     --contrast-color: #fff;
+
     .prose {
       --tw-prose-headings: var(--gray-12);
       --tw-prose-body: var(--gray-12);
@@ -44,6 +60,7 @@
 
   .dark {
     --contrast-color: #0a0a0a;
+
     .prose {
       --tw-prose-headings: var(--gray-12);
       --tw-prose-body: var(--gray-11);
@@ -65,14 +82,17 @@
 }
 
 @layer utilities {
+
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 }
 
@@ -135,27 +155,21 @@ input:-webkit-autofill:focus {
   @apply whitespace-pre-line rounded border border-primary bg-primary px-1 font-normal text-primary;
 }
 
-.prose
-  p
-  :where(code):not(
-    :where([class~="not-prose"], [class~="not-prose"] *)
-  )::before,
-.prose
-  p
-  :where(code):not(
-    :where([class~="not-prose"], [class~="not-prose"] *)
-  )::after {
+.prose p :where(code):not( :where([class~="not-prose"], [class~="not-prose"] *))::before,
+.prose p :where(code):not( :where([class~="not-prose"], [class~="not-prose"] *))::after {
   content: "";
 }
 
 /* syntax highlighting */
 pre[class*="language-"] {
-  @apply rounded-md border border-secondary bg-white dark:bg-contrast text-[13px] text-xs text-primary ;
+  @apply rounded-md border border-secondary bg-white dark:bg-contrast text-[13px] text-xs text-primary;
 }
 
 .code-highlight {
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
+  float: left;
+  /* 1 */
+  min-width: 100%;
+  /* 2 */
 }
 
 .code-line {
@@ -164,23 +178,28 @@ pre[class*="language-"] {
   padding-right: 16px;
   margin-left: -16px;
   margin-right: -16px;
-  border-left: 4px solid rgba(0, 0, 0, 0); /* Set placeholder for highlight accent border color to transparent */
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  /* Set placeholder for highlight accent border color to transparent */
 }
 
 .code-line.inserted {
-  background-color: rgba(16, 185, 129, 0.2); /* Set inserted line (+) color */
+  background-color: rgba(16, 185, 129, 0.2);
+  /* Set inserted line (+) color */
 }
 
 .code-line.deleted {
-  background-color: rgba(239, 68, 68, 0.2); /* Set deleted line (-) color */
+  background-color: rgba(239, 68, 68, 0.2);
+  /* Set deleted line (-) color */
 }
 
 .highlight-line {
   margin-left: -24px;
   margin-right: -24px;
   padding-left: 26px;
-  background-color: var(--blue-a3); /* Set highlight bg color */
-  border-left: 2px solid var(--blue-10); /* Set highlight accent border color */
+  background-color: var(--blue-a3);
+  /* Set highlight bg color */
+  border-left: 2px solid var(--blue-10);
+  /* Set highlight accent border color */
 }
 
 .line-number::before {
@@ -192,7 +211,8 @@ pre[class*="language-"] {
   text-align: right;
   margin-right: 24px;
   margin-left: -8px;
-  color: var(--gray-8); /* Line number color */
+  color: var(--gray-8);
+  /* Line number color */
   content: attr(line);
 }
 

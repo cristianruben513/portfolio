@@ -29,7 +29,7 @@ export default function Navigation() {
   return (
     <header className="md:mt-6">
       <nav className="mx-auto flex max-w-[800px] items-center justify-between gap-3 px-4 py-3 md:px-6">
-        <Link href="/" className="shrink-0 text-primary">
+        <Link href="/">
           <Image
             src={icon}
             alt="Avatar de Cristian Ruben"

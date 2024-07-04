@@ -5,7 +5,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 export default function PageHeader({ title, children }: Props) {
   return (
     <header className="flex flex-col gap-3">
-      <h1 className="animate-in text-3xl font-bold tracking-wide text-primary">
+      <h1 className="animate-in text-3xl font-bold tracking-wide">
         {title}
       </h1>
 

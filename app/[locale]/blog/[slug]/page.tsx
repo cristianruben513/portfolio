@@ -1,6 +1,6 @@
 import { allPosts } from ".contentlayer/generated";
 import Mdx from "@/app/[locale]/blog/components/MdxWrapper";
-import { formatDate } from "@/app/_utils/formatDate";
+import { formatDate } from "@/lib/formatDate";
 import Container from "@/app/components/Container";
 import Tags from "@/app/components/Tags";
 import Me from "@/public/avatar.webp";
@@ -56,8 +56,8 @@ export default async function Blog({ params }: { params: any }) {
       <div className="flex flex-col gap-20">
         <article>
           <div className="flex flex-col gap-8">
-            <div className="flex max-w-xl flex-col gap-4 text-pretty">
-              <h1 className="text-3xl font-bold leading-tight tracking-tight text-primary">
+            <div className="flex max-w-xl flex-col gap-4">
+              <h1 className="text-3xl font-bold leading-tight tracking-tight">
                 {post.title}
               </h1>
               <p className="text-secondary">{post.summary}</p>
@@ -96,7 +96,7 @@ export default async function Blog({ params }: { params: any }) {
           )}
 
           <div className="h-16" />
-          <div className="prose prose-neutral text-pretty">
+          <div className="prose prose-neutral">
             <Mdx code={post.body.code} />
           </div>
         </article>

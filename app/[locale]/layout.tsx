@@ -23,7 +23,7 @@ export default async function RootLayout({ children, params: { locale } }: Props
       lang={locale}
       className={`${GeistSans.variable} ${GeistMono.variable}`}
     >
-      <body className="bg-white text-primary antialiased md:dark:bg-black dark:bg-zinc-900">
+      <body className="bg-white antialiased md:dark:bg-black dark:bg-zinc-900">
         <Analytics />
 
         <NextIntlClientProvider messages={messages}>

@@ -1,8 +1,8 @@
 import Link from "@/app/components/ui/Link";
 import { MetadataProps } from "@/types/metadata";
+import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import Container from "../components/Container";
-import { useTranslations } from "next-intl";
 
 export async function generateMetadata({ params: { locale } }: MetadataProps) {
   const t = await getTranslations({ locale, namespace: 'metadata' });
@@ -18,7 +18,7 @@ const Custom404 = () => {
 
   return (
     <Container className="flex flex-col gap-4">
-      <h1 className="text-4xl font-bold text-primary">
+      <h1 className="text-4xl font-bold">
         404
       </h1>
 

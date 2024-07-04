@@ -1,5 +1,5 @@
 import type { Post } from ".contentlayer/generated";
-import { formatDate } from "@/app/_utils/formatDate";
+import { formatDate } from "@/lib/formatDate";
 import Section from "@/app/components/Section";
 import Link from "@/app/components/ui/Link";
 import { motion } from "framer-motion";

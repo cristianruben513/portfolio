@@ -61,7 +61,7 @@ export default function Blog() {
                 <div>
                   <Link
                     href={`/projects/${project.slug}` as any}
-                    className="font-medium text-primary hover:underline"
+                    className="font-medium hover:underline"
                   >
                     {project.title}
                   </Link>

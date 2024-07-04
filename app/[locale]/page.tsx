@@ -3,13 +3,13 @@ import PostList from "@/app/[locale]/blog/components/PostList";
 import BentoGrid from "@/app/components/bento/BentoGrid";
 import Link from "@/app/components/ui/Link";
 import Me from "@/public/avatar.webp";
+import { MetadataProps } from "@/types/metadata";
 import { MoveUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { getTranslations } from 'next-intl/server';
 import Image from "next/image";
 import Container from "../components/Container";
 import { Photos } from "../components/photos";
-import { MetadataProps } from "@/types/metadata";
 
 export async function generateMetadata({ params: { locale } }: MetadataProps) {
   const t = await getTranslations({ locale, namespace: 'metadata' });
@@ -43,20 +43,17 @@ export default function Home() {
     <div className="flex flex-col gap-16 md:gap-20">
 
       <Container className="flex animate-in flex-col gap-8 w-full">
-        <div className="overflow-hidden rounded-full size-24">
-          <Image
-            src={Me}
-            alt="Cristian Ruben"
-            width={400}
-            height={400}
-          />
-        </div>
+        <Image
+          src={Me}
+          alt="Cristian Ruben"
+          className="rounded-full size-24"
+        />
 
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
-          Cristian Ruben
+        <h1 className="text-3xl md:text-3xl font-bold tracking-tight">
+          Cristian Ruben Figueroa Espinoza
         </h1>
 
-        <h2 className="max-w-xl text-secondary text-balance -mt-2 md:text-lg">
+        <h2 className="max-w-2xl text-secondary -mt-2 md:text-lg">
           <span className="font-bold text-blue-700 dark:text-blue-300">
             {t("hero.1")}
           </span> {""}
@@ -77,7 +74,7 @@ export default function Home() {
       <Container className="flex animate-in flex-col gap-8 w-full">
         <div className="space-y-4">
           <Link
-            className="group flex items-center gap-2 text-xl font-semibold tracking-tight text-primary"
+            className="group flex items-center gap-2 text-xl font-semibold tracking-tight"
             href="/blog"
           >
             {t("blog.title")}
