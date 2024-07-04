@@ -52,11 +52,11 @@ export default function Home() {
           />
         </div>
 
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-primary">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
           Cristian Ruben
         </h1>
 
-        <h2 className="max-w-xl text-secondary text-pretty -mt-2">
+        <h2 className="max-w-xl text-secondary text-balance -mt-2 md:text-lg">
           <span className="font-bold text-blue-700 dark:text-blue-300">
             {t("hero.1")}
           </span> {""}

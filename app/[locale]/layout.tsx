@@ -1,22 +1,21 @@
 import Navigation from "@/app/components/Navigation";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import Footer from "../components/Footer";
 import Background from "../components/background";
-import { Analytics } from "@vercel/analytics/react"
 
 import "./globals.css";
 
-export default async function RootLayout({
-  children,
-  params: { locale }
-}: {
+interface Props {
   children: React.ReactNode;
   params: { locale: string };
-}) {
+}
+
+export default async function RootLayout({ children, params: { locale } }: Props) {
   const messages = await getMessages();
 
   return (
@@ -25,8 +24,8 @@ export default async function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable}`}
     >
       <body className="bg-white text-primary antialiased md:dark:bg-black dark:bg-zinc-900">
-        <Analytics/>
-        
+        <Analytics />
+
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="dark">
             <Background />
