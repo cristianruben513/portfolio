@@ -4,34 +4,38 @@ import { Sparkles } from "lucide-react";
 import { FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 
-export default function Contact() {
-  const links = [
-    {
-      href: "https://wa.me/+523339632525",
-      icon: <FaWhatsapp />,
-      styles: "bg-[#25D366] text-white",
-      arialabel: "Contactame a traves de WhatsApp"
-    },
-    {
-      href: "mailto:cristian.figueroa.crfe@gmail.com",
-      icon: <IoMail />,
-      styles: "bg-neutral-200 text-black",
-      arialabel: "Contactame a traves de Email"
-    },
-    {
-      href: "https://twitter.com/RubenFigue513",
-      icon: <FaTwitter />,
-      styles: "bg-[#1DA1F2] text-white",
-      arialabel: "Contactame a traves de Twitter"
-    },
-    {
-      href: "https://www.linkedin.com/in/cristianruben/",
-      icon: <FaLinkedin />,
-      styles: "bg-[#0A66C2] text-white",
-      arialabel: "Contactame a traves de LinkedIn"
-    }
-  ]
+export const links = [
+  {
+    href: "https://wa.me/+523339632525",
+    icon: <FaWhatsapp />,
+    name: "WhatsApp",
+    styles: "bg-[#25D366] text-white",
+    arialabel: "Contactame a traves de WhatsApp"
+  },
+  {
+    href: "mailto:cristian.figueroa.crfe@gmail.com",
+    icon: <IoMail />,
+    name: "Email",
+    styles: "bg-neutral-200 text-black",
+    arialabel: "Contactame a traves de Email"
+  },
+  {
+    href: "https://twitter.com/RubenFigue513",
+    icon: <FaTwitter />,
+    name: "Twitter",
+    styles: "bg-[#1DA1F2] text-white",
+    arialabel: "Contactame a traves de Twitter"
+  },
+  {
+    href: "https://www.linkedin.com/in/cristianruben/",
+    icon: <FaLinkedin />,
+    name: "LinkedIn",
+    styles: "bg-[#0A66C2] text-white",
+    arialabel: "Contactame a traves de LinkedIn"
+  }
+]
 
+export default function Contact() {
   return (
     <Card className="flex aspect-square flex-col gap-1.5">
 

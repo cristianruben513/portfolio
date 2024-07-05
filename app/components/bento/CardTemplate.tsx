@@ -4,13 +4,11 @@ import Meteors from "../magic-ui/Meteors";
 export default function Card({
   children,
   className,
-  disableHalo,
   noPadding,
   noMeteors
 }: {
   children: React.ReactNode;
   className: string;
-  disableHalo?: boolean;
   noPadding?: boolean;
   noMeteors?: boolean;
 }) {
@@ -22,7 +20,7 @@ export default function Card({
         className,
       )}
     >
-      {!noMeteors && <Meteors number={40} />}
+      {!noMeteors && <Meteors number={20} />}
       {children}
     </div>
   );

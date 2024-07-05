@@ -1,11 +1,11 @@
 "use client";
 
-import { ReactNode } from "react";
 import clsx from "clsx";
+import { ReactNode } from "react";
 
 
 type SectionProps = {
-  heading: string;
+  heading?: string;
   headingAlignment?: "right" | "left";
   children: ReactNode;
 };
@@ -22,7 +22,7 @@ export default function Section({
         className={clsx(
           "md:w-32 text-secondary shrink-0",
           headingAlignment === "right" && "md:text-right",
-          )}
+        )}
       >
         {heading}
       </h2>

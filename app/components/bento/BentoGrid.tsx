@@ -1,4 +1,3 @@
-import Contact from "@/app/components/bento/Contact";
 import YouTube from "@/app/components/bento/Projects";
 import Instagram from "@/app/components/bento/Resume";
 import About from "./About";
@@ -10,9 +9,7 @@ export default function BentoGrid() {
       <YouTube />
       <Instagram />
       <About />
-      <Contact />
       <GlobeCard />
-      {/* <TestOrbit /> */}
     </div>
   );
 }

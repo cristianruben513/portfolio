@@ -8,6 +8,7 @@ import { MoveUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { getTranslations } from 'next-intl/server';
 import Image from "next/image";
+import { links } from "../components/bento/Contact";
 import Container from "../components/Container";
 import { Photos } from "../components/photos";
 
@@ -42,7 +43,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16 md:gap-20">
 
-      <Container className="flex animate-in flex-col gap-8 w-full">
+      <Container className="flex animate-in flex-col gap-8">
         <Image
           src={Me}
           alt="Cristian Ruben"
@@ -65,13 +66,32 @@ export default function Home() {
         </h2>
       </Container>
 
-      <Container className="animate-in w-full">
+      <Container className="flex flex-wrap gap-2 gap-y-3 md:gap-4">
+        {links.map((link, index) => (
+          <div className="border rounded-full py-1.5 px-3.5 border-neutral-600" key={index}>
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.arialabel}
+              className="flex items-center gap-2 md:text-lg font-semibold tracking-tight"
+            >
+              {link.icon}
+              <span className="text-xs">
+                {link.name}
+              </span>
+            </a>
+          </div>
+        ))}
+      </Container>
+
+      <Container className="animate-in">
         <BentoGrid />
       </Container>
 
       <Photos />
 
-      <Container className="flex animate-in flex-col gap-8 w-full">
+      <Container className="flex animate-in flex-col gap-8">
         <div className="space-y-4">
           <Link
             className="group flex items-center gap-2 text-xl font-semibold tracking-tight"

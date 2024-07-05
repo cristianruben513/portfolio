@@ -18,7 +18,6 @@ export default function Navigation() {
   const t = useTranslations("header")
 
   const links = [
-    { label: t("nav.home"), href: "/" },
     { label: t("nav.projects"), href: "/projects" },
     { label: t("nav.about"), href: "/about" },
     { label: t("nav.resume"), href: "https://cristian-cv.vercel.app/" },
@@ -27,8 +26,8 @@ export default function Navigation() {
   ];
 
   return (
-    <header className="md:mt-6">
-      <nav className="mx-auto flex max-w-[800px] items-center justify-between gap-3 px-4 py-3 md:px-6">
+    <header className="md:mt-6 mt-3">
+      <nav className="mx-auto flex max-w-[800px] items-center justify-between gap-3 px-6 py-3 md:px-6">
         <Link href="/">
           <Image
             src={icon}
@@ -46,7 +45,7 @@ export default function Navigation() {
           ))}
         </ul>
 
-        <div className="ml-auto flex h-8 w-8 items-center justify-center md:ml-0">
+        <div className="ml-auto flex size-8 items-center justify-center md:ml-0">
           <LangSwitcher />
           <ThemeSwitcher />
         </div>
@@ -65,7 +64,7 @@ export default function Navigation() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <PopoverPanel className="absolute right-0 z-10 mt-2 w-48 origin-top-right overflow-auto rounded-xl p-2 text-base sm:text-sm bg-neutral-200 dark:bg-black">
+            <PopoverPanel className="absolute right-0 z-10 mt-2 w-[50vw] origin-top-right overflow-auto rounded-xl p-2 text-base sm:text-sm bg-neutral-200 dark:bg-black">
               <div className="grid">
                 {links.map((link) => {
                   return (

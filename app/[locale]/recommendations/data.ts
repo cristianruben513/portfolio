@@ -6,7 +6,7 @@ export const gear = [
     image: "https://http2.mlstatic.com/D_NQ_NP_682953-MLU54962680382_042023-O.webp",
   },
   {
-    name: "Logitech MX Master Mouse 3S",
+    name: "Logitech MX Master 3S",
     category: "Home Desk Setup",
     description:
       "Ergonomic and comfortable to be used for all day use, love the scrolling!",

@@ -6,7 +6,7 @@ type Workplace = {
   title: string;
   company: string;
   imageSrc: string | StaticImageData;
-  time?: string;
+  time: string;
   link?: string;
   description?: string;
 };
@@ -33,17 +33,15 @@ function Workplace({ title, company, imageSrc, time, link, description }: Workpl
             </p>
             <p className="text-green-200 md:text-base text-sm">{company}</p>
             {description && (
-              <p className="text-sm mt-3 dark:text-blue-200 text-blue-600">
+              <p className="text-sm mt-3 text-secondary">
                 {description}
               </p>
             )}
           </div>
         </div>
-        {time && (
-          <time className="text-secondary md:text-base text-xs fixed right-0 top-0">
-            {time}
-          </time>
-        )}
+        <time className="text-secondary text-xs absolute right-0 top-0">
+          {time}
+        </time>
       </div>
       {link && (
         <a

@@ -2,7 +2,6 @@
 
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
-import { isDesktop } from 'react-device-detect';
 import "./index.css";
 
 export default function Background() {
@@ -15,8 +14,8 @@ export default function Background() {
     duration: string
   ) => {
     const COLORS = theme === "dark" ?
-      ["#fff2", "#fff4", "#fff7", "#fffc"] :
-      ["#2222", "#3333", "#5555", "#6666"];
+      ["#fff7", "#fffc"] :
+      ["#444"];
 
     const layer = [];
 
@@ -33,12 +32,12 @@ export default function Background() {
         // Verificar que las estrellas estén fuera del área ocupada por el div central
 
         // Ancho del div central: 800px, entonces su mitad es 400px
-        x >= window.innerWidth / 2 - 400 &&
-        x <= window.innerWidth / 2 + 400 &&
+        x >= window.innerWidth / 2 &&
+        x <= window.innerWidth / 2 &&
 
         // Alto del div central: 800px, entonces su mitad es 400px
-        y >= window.innerHeight / 2 - 400 &&
-        y <= window.innerHeight / 2 + 400
+        y >= window.innerHeight / 2 &&
+        y <= window.innerHeight / 2 
       );
 
       layer.push(`${x}px ${y}px 0 ${color}, ${x}px ${y + window.innerHeight}px 0 ${color}`);
@@ -52,15 +51,13 @@ export default function Background() {
   };
 
   useEffect(() => {
-    if (isDesktop) {
-      generateSpaceLayer("2px", ".space-1", 120, "35s");
-      generateSpaceLayer("3px", ".space-2", 80, "50s");
-      generateSpaceLayer("6px", ".space-3", 25, "65s");
-    }
+    generateSpaceLayer("2px", ".space-1", 120, "35s");
+    generateSpaceLayer("3px", ".space-2", 80, "50s");
+    generateSpaceLayer("6px", ".space-3", 25, "65s");
   }, [theme]);
 
   return (
-    <div className="dark:bg-black bg-white fixed inset-0 overflow-hidden hidden md:flex">
+    <div className="dark:bg-black bg-white fixed inset-0 overflow-hidden flex">
       <div className="space space-1"></div>
       <div className="space space-2"></div>
       <div className="space space-3"></div>

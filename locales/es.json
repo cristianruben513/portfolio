@@ -69,15 +69,15 @@
     "sections": {
       "about": {
         "title": "Acerca de Mi",
-        "content1": "Hola, soy Cristian Ruben, vivo en Guanajuato, Mexico. Llevo desde los 16 años programando, soy un ingeniero en software y me especializo en desarrollo web y diseño de productos.",
-        "content2": "Cuando no estoy trabajando en mi escritorio, probablemente estoy escuchando un podcast, jugando futbol con mi hermano, o disfrutando de la vida."
+        "content1": "Hola, soy Cristian Ruben, vivo en Guanajuato, Mexico. Llevo desde los 16 años programando, soy ingeniero en software, me especializo en desarrollo web",
+        "content2": "Cuando no estoy trabajando en mi escritorio, probablemente estoy escuchando un podcast, jugando futbol con mi hermano, o disfrutando de la vida.",
+        "content3": "He trabajado como freelancer por más de 3 años, desarrollando aplicaciones web, ayudando a pequeñas empresas con su presencia en la web."
       },
       "contact": {
         "title": "Contacto"
       },
       "work": {
         "title": "Work",
-        "content": "He trabajado como freelancer por más de 3 años, desarrollando aplicaciones web y servicios backend, ayudando a pequeñas empresas con su presencia en la web.",
         "places": {
           "dorichangos": {
             "title": "Dorichangos",
@@ -87,7 +87,6 @@
       },
       "education": {
         "title": "Educación",
-        "content": "Me especializo en JavaScript, React y desarrollo web, con experiencia en UI/UX. Actualmente, estoy ampliando mis habilidades en infraestructura, DevOps y optimización",
         "places": {
           "cbtis": {
             "title": "Técnico en Programación"

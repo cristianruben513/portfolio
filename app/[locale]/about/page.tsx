@@ -80,10 +80,9 @@ export default function About() {
           <Image
             src={meLily}
             alt="Yo y mi amor"
-            width={324}
+            width={224}
             height={139}
-            className="pointer-events-none relative inset-0 h-56 -rotate-6 rounded-xl bg-gray-400 object-cover shadow-md"
-            priority
+            className="pointer-events-none relative inset-0 h-52 left-6 -rotate-6 rounded-xl bg-gray-400 object-cover shadow-md"
           />
         </div>
 
@@ -93,11 +92,10 @@ export default function About() {
         >
           <Image
             src={colorado}
-            alt={"me and lily"}
+            alt="Yo y mi novia"
             width={220}
             height={260}
-            className="pointer-events-none absolute inset-0 -top-28 left-[40%] w-48 h-56 rotate-6 rounded-xl bg-gray-400 object-cover shadow-md md:left-[60%] md:w-56"
-            priority
+            className="pointer-events-none absolute inset-0 -top-28 left-[40%] w-40 h-48 rotate-6 rounded-xl bg-gray-400 object-cover shadow-md md:left-[60%] md:w-56"
           />
         </div>
       </div>
@@ -117,6 +115,7 @@ export default function About() {
           <div className="flex flex-col gap-6 leading-loose">
             <p>{t('sections.about.content1')}</p>
             <p>{t('sections.about.content2')}</p>
+            <p>{t('sections.about.content3')}</p>
           </div>
         </Section>
 
@@ -147,7 +146,6 @@ export default function About() {
           headingAlignment="left"
         >
           <div className="flex w-full flex-col gap-8">
-            <p>{t('sections.work.content')}</p>
             <Workplaces items={workplaces} />
           </div>
         </Section>
@@ -157,7 +155,6 @@ export default function About() {
           headingAlignment="left"
         >
           <div className="flex w-full flex-col gap-8">
-            <p>{t('sections.education.content')}</p>
             <Workplaces items={educationplaces} />
           </div>
         </Section>

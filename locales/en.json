@@ -69,15 +69,15 @@
     "sections": {
       "about": {
         "title": "About Me",
-        "content1": "Hi, I'm Cristian Ruben, I live in Guanajuato, Mexico. I've been programming since I was 16, I'm a software engineer and I specialize in web development and product design.",
-        "content2": "When I'm not working at my desk, I'm probably listening to a podcast, playing soccer with my brother, or enjoying life."
+        "content1": "Hi, I'm Cristian Ruben, I live in Guanajuato, Mexico. I've been programming since I was 16, I'm a software engineer and I specialize in web development.",
+        "content2": "When I'm not working at my desk, I'm probably listening to a podcast, playing soccer with my brother, or enjoying life.",
+        "content3": "I've worked as a freelancer for over 3 years, developing web applications, helping small businesses with their web presence."
       },
       "contact": {
         "title": "Contact"
       },
       "work": {
         "title": "Work",
-        "content": "I've worked as a freelancer for over 3 years, developing web applications and backend services, helping small businesses with their web presence.",
         "places": {
           "dorichangos": {
             "title": "Dorichangos",
@@ -87,7 +87,6 @@
       },
       "education": {
         "title": "Education",
-        "content": "I specialize in JavaScript, React and web development, with experience in UI/UX. Currently, I'm expanding my skills in infrastructure, DevOps and optimization.",
         "places": {
           "cbtis": {
             "title": "Technical degree in Programming"
