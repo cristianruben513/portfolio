@@ -4,6 +4,7 @@ import Container from "@/app/components/Container";
 import Link from "@/app/components/ui/Link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import ContactForm from "../../blog/components/ContactForm";
 
 type Props = {
   params: {
@@ -19,9 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { title, description, image, slug } = post;
 
-  const ogImage = image
-    ? `https://cristian.digital/projects/${slug}/${image}`
-    : `https://cristian.digital/api/og?title=${title}`;
+  const ogImage = image ?? `https://cristian.digital/api/og?title=${title}`;
 
   const metadata: Metadata = {
     metadataBase: new URL("https://cristian.digital"),
@@ -73,24 +72,13 @@ export default function Project({ params }: { params: any }) {
           <div className="h-12" />
           <div
             className="project prose prose-neutral animate-in relative w-full max-w-[800px]"
-            style={{ "--index": 2 } as React.CSSProperties}
           >
             <Mdx code={post.body.code} />
           </div>
         </article>
 
         <div className="flex flex-col gap-20">
-
-          <div className="flex flex-col gap-6">
-            <h2>Contacto</h2>
-            <p className="max-w-lg text-secondary">
-              Necesitas ayuda con un proyecto? Puedes contactarme a través de mis {""}
-              <Link href="/links" underline>
-                links
-              </Link>
-              . Estare encantado de ayudarte!{" "}
-            </p>
-          </div>
+          <ContactForm />
 
           <Link href="/projects" className="underline">
             ← Todos los Proyectos

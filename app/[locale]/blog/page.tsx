@@ -10,11 +10,11 @@ export async function generateMetadata({ params: { locale } }: MetadataProps) {
   const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
-    title: t('metadata.title'),
-    description: t('metadata.description'),
+    title: t('blog.title'),
+    description: t('blog.description'),
     openGraph: {
-      title: t('metadata.title'),
-      description: t('metadata.description'),
+      title: t('blog.title'),
+      description: t('blog.description'),
       type: "website",
       url: "https://cristian.digital",
       images: [{

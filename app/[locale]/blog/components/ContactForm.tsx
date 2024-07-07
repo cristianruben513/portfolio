@@ -4,10 +4,10 @@ export default function ContactForm() {
   return (
     <div className="flex flex-col gap-6">
       <h2>Contacto</h2>
-      <p className="max-w-lg text-secondary">
-        Necesitas ayuda con un proyecto? Puedes contactarme a través de mis {""}
+      <p className="max-w-2xl text-secondary">
+        Necesitas ayuda con un proyecto?{" "}
         <Link href="/links" underline>
-          links
+          CONTACTAME
         </Link>
         . Estare encantado de ayudarte!{" "}
       </p>

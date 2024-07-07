@@ -21,11 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post) { notFound() }
 
-  const { title, publishedAt, summary, image, slug } = post;
+  const { title, publishedAt, summary, slug } = post;
 
-  const ogImage = image
-    ? `https://cristian.digital/blog/${slug}/${image}`
-    : `https://cristian.digital/api/og?title=${title}`;
+  const ogImage = `https://cristian.digital/api/og?title=${title}`;
 
   const metadata: Metadata = {
     metadataBase: new URL("https://cristian.digital"),
@@ -53,7 +51,7 @@ export default async function Blog({ params }: { params: any }) {
 
   return (
     <Container>
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col gap-20 w-full">
         <article>
           <div className="flex flex-col gap-8">
             <div className="flex max-w-xl flex-col gap-4">
@@ -96,7 +94,8 @@ export default async function Blog({ params }: { params: any }) {
           )}
 
           <div className="h-16" />
-          <div className="prose prose-neutral">
+
+          <div className="prose max-w-[800px] prose-neutral">
             <Mdx code={post.body.code} />
           </div>
         </article>

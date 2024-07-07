@@ -16,7 +16,7 @@ export const config = {
     '/blog/:path*',
     '/projects',
     '/projects/:path*',
-    '/recommendations',
+    '/recommendations'
   ]
 };
 

@@ -6,18 +6,27 @@ const withNextIntl = require('next-intl/plugin')('i18n.ts');
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "tailwindui.com",
-      "images.unsplash.com",
-      "m.media-amazon.com",
-      "ik.imagekit.io",
-      "miro.medium.com",
-      "i.ytimg.com",
-      "store.storeimages.cdn-apple.com",
-      "www.apple.com",
-      "http2.mlstatic.com",
-      "upload.wikimedia.org",
-      "cdn.icon-icons.com"
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com",
+      },
+      {
+        protocol: "https",
+        hostname: "http2.mlstatic.com",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.icon-icons.com",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com"
+      }
     ],
   },
 };

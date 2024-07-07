@@ -50,7 +50,7 @@ export default function Home() {
           className="rounded-full size-24"
         />
 
-        <h1 className="text-3xl md:text-3xl font-bold tracking-tight">
+        <h1 className="text-3xl md:text-3xl font-bold">
           Cristian Ruben Figueroa Espinoza
         </h1>
 
@@ -66,7 +66,7 @@ export default function Home() {
         </h2>
       </Container>
 
-      <Container className="flex flex-wrap gap-2 gap-y-3 md:gap-4">
+      <Container className="flex flex-wrap gap-2 gap-y-3 md:gap-4 animate-in">
         {links.map((link, index) => (
           <div className="border rounded-full py-1.5 px-3.5 border-neutral-600" key={index}>
             <a
@@ -74,7 +74,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.arialabel}
-              className="flex items-center gap-2 md:text-lg font-semibold tracking-tight"
+              className="flex items-center gap-2 md:text-lg font-semibold"
             >
               {link.icon}
               <span className="text-xs">
@@ -94,7 +94,7 @@ export default function Home() {
       <Container className="flex animate-in flex-col gap-8">
         <div className="space-y-4">
           <Link
-            className="group flex items-center gap-2 text-xl font-semibold tracking-tight"
+            className="group flex items-center gap-2 text-xl font-semibold"
             href="/blog"
           >
             {t("blog.title")}
